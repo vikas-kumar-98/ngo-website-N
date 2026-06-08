@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="description" content="HopeNexus Foundation partners with leading global organizations, corporations, and institutions to maximize impact and create lasting change worldwide.">
+  <meta name="keywords" content="partners, NGO partners, corporate partners, charity partners, HopeNexus partners, collaboration">
+  <meta name="author" content="HopeNexus Foundation">
+  <meta name="theme-color" content="#2e7d32">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Our Partners | HopeNexus Foundation - Global Collaborations">
+  <meta property="og:site_name" content="HopeNexus Foundation">
+  <meta property="og:description" content="Meet the organizations, corporations, and institutions partnering with HopeNexus to create lasting change worldwide.">
+  <meta property="og:image" content="https://picsum.photos/id/48/1200/630">
+  <meta property="og:url" content="https://www.hopenexus.org/our-partners.html">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Partners | HopeNexus Foundation">
+  <meta name="twitter:description" content="Global partnerships for global impact.">
+  
+  <title>Our Partners | HopeNexus Foundation - Global Collaborations for Lasting Impact</title>
+  
+  <!-- CSS Dependencies -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #2e7d32;
+      --primary-dark: #1b5e20;
+      --primary-light: #4caf50;
+      --primary-ultra-light: #e8f5e9;
+      --secondary: #1976d2;
+      --accent: #f57c00;
+      --danger: #f44336;
+      --warning: #ffc107;
+      --info: #2196f3;
+      --white: #ffffff;
+      --light-bg: #f8f9fa;
+      --gray-100: #f5f5f5;
+      --gray-200: #eeeeee;
+      --gray-300: #e0e0e0;
+      --gray-400: #bdbdbd;
+      --gray-500: #9e9e9e;
+      --gray-600: #757575;
+      --gray-700: #616161;
+      --gray-800: #424242;
+      --gray-900: #212121;
+      --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+      --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+      --shadow-xl: 0 20px 25px rgba(0,0,0,0.15);
+      --radius-sm: 0.375rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 0.75rem;
+      --radius-xl: 1rem;
+      --radius-2xl: 1.5rem;
+      --radius-full: 9999px;
+      --transition-fast: 0.2s ease;
+      --transition-base: 0.3s ease;
+    }
+
+    body.dark-mode {
+      --white: #1a1a2e;
+      --light-bg: #16213e;
+      --gray-100: #1e293b;
+      --gray-200: #334155;
+      --gray-300: #475569;
+      --gray-600: #cbd5e1;
+      --gray-700: #e2e8f0;
+      --gray-800: #f1f5f9;
+      --gray-900: #f8fafc;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      overflow-x: hidden;
+      background-color: var(--white);
+      color: var(--gray-800);
+      transition: background-color var(--transition-base), color var(--transition-base);
+    }
+
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: var(--gray-200); }
+    ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: var(--radius-full); }
+    ::-webkit-scrollbar-thumb:hover { background: var(--primary-dark); }
+
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--primary);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.5s;
+    }
+    .loader-logo { font-size: 4rem; color: white; margin-bottom: 1rem; animation: pulse 1.5s infinite; }
+    @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.8; } }
+    .loader-spinner {
+      width: 50px; height: 50px; border: 3px solid rgba(255,255,255,0.3);
+      border-top-color: white; border-radius: 50%; margin: 1rem auto;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .top-bar {
+      background: var(--gray-900);
+      color: var(--white);
+      padding: 0.5rem 0;
+      font-size: 0.875rem;
+    }
+    .top-bar .contact-info span { margin-right: 1.5rem; }
+    .top-bar .contact-info i { margin-right: 0.25rem; color: var(--primary-light); }
+    .social-icons a { color: var(--white); margin-left: 1rem; transition: var(--transition-fast); display: inline-block; }
+    .social-icons a:hover { color: var(--primary-light); transform: translateY(-2px); }
+
+    .navbar {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-base);
+      padding: 1rem 0;
+    }
+    .navbar.scrolled { padding: 0.5rem 0; box-shadow: var(--shadow-lg); }
+    body.dark-mode .navbar { background: rgba(26,26,46,0.95); }
+    .navbar-brand { font-size: 1.75rem; font-weight: 800; }
+    .navbar-brand i { color: var(--primary); }
+    .navbar-brand span { background: linear-gradient(135deg, var(--gray-900), var(--primary)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-link { font-weight: 600; margin: 0 0.5rem; position: relative; }
+    .nav-link::before {
+      content: ''; position: absolute; bottom: -5px; left: 50%; transform: translateX(-50%);
+      width: 0; height: 2px; background: var(--primary); transition: width var(--transition-base);
+    }
+    .nav-link:hover::before, .nav-link.active::before { width: 80%; }
+
+    .mega-dropdown { position: static; }
+    @media (min-width: 992px) {
+      .mega-menu {
+        width: 100%; left: 0; right: 0; padding: 2rem;
+        border: none; border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+        box-shadow: var(--shadow-xl);
+      }
+    }
+    .mega-menu-title { font-weight: 700; margin-bottom: 1rem; color: var(--primary); }
+    .mega-menu ul { list-style: none; padding: 0; }
+    .mega-menu ul li { margin-bottom: 0.5rem; }
+    .mega-menu ul li a { color: var(--gray-700); transition: var(--transition-fast); text-decoration: none; }
+    .mega-menu ul li a:hover { color: var(--primary); padding-left: 0.5rem; }
+
+    .page-header {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      padding: 120px 0 60px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 1%, transparent 1%);
+      background-size: 50px 50px;
+      animation: moveBackground 20s linear infinite;
+    }
+    @keyframes moveBackground {
+      from { transform: translate(0, 0); }
+      to { transform: translate(50px, 50px); }
+    }
+    .page-title { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; position: relative; z-index: 1; }
+    .page-breadcrumb { position: relative; z-index: 1; }
+    .page-breadcrumb a { color: white; text-decoration: none; opacity: 0.8; }
+    .page-breadcrumb a:hover { opacity: 1; }
+
+    .section-badge { display: inline-block; margin-bottom: 1rem; }
+    .section-badge span {
+      background: var(--primary-ultra-light);
+      color: var(--primary);
+      padding: 0.25rem 1.5rem;
+      border-radius: var(--radius-full);
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+    .section-title { font-size: 2.5rem; margin-bottom: 1rem; }
+    .section-subtitle { font-size: 1.125rem; color: var(--gray-600); margin-bottom: 2rem; }
+    @media (max-width: 768px) { .section-title { font-size: 1.75rem; } }
+
+    .partner-category {
+      margin-bottom: 4rem;
+    }
+    .partner-category-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 3px solid var(--primary);
+      display: inline-block;
+    }
+    .partner-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: var(--transition-base);
+      height: 100%;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+    .partner-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-xl);
+    }
+    .partner-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--primary-light));
+      transition: left var(--transition-base);
+    }
+    .partner-card:hover::before {
+      left: 0;
+    }
+    .partner-logo {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      margin: 0 auto 1.5rem;
+      filter: grayscale(100%);
+      transition: var(--transition-base);
+    }
+    .partner-card:hover .partner-logo {
+      filter: grayscale(0);
+    }
+    .partner-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .partner-description {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      margin-bottom: 1rem;
+    }
+    .partner-category-badge {
+      display: inline-block;
+      background: var(--primary-ultra-light);
+      color: var(--primary);
+      padding: 0.2rem 0.75rem;
+      border-radius: var(--radius-full);
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      height: 100%;
+    }
+    .testimonial-card i {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .become-partner-card {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      border-radius: var(--radius-2xl);
+      padding: 3rem;
+      text-align: center;
+      color: white;
+    }
+
+    .footer {
+      background: var(--gray-900);
+      color: var(--gray-400);
+      padding-top: 4rem;
+    }
+    .footer-logo { font-size: 1.75rem; font-weight: 800; margin-bottom: 1.5rem; }
+    .footer-widget h4 { color: white; margin-bottom: 1.5rem; font-size: 1.25rem; }
+    .footer-widget ul { list-style: none; padding: 0; }
+    .footer-widget ul li { margin-bottom: 0.5rem; }
+    .footer-widget ul li a { color: var(--gray-400); transition: var(--transition-fast); text-decoration: none; }
+    .footer-widget ul li a:hover { color: var(--primary); padding-left: 0.5rem; }
+    .footer-bottom { margin-top: 3rem; padding: 1.5rem 0; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; }
+
+    .floating-buttons {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .floating-btn {
+      width: 50px; height: 50px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition-base);
+      box-shadow: var(--shadow-lg);
+      border: none;
+    }
+    .floating-btn:hover { transform: scale(1.1); background: var(--primary-dark); }
+    @media (max-width: 768px) { .floating-btn { width: 40px; height: 40px; } }
+
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: var(--white);
+        padding: 1rem;
+        border-radius: var(--radius-lg);
+        margin-top: 1rem;
+        max-height: 70vh;
+        overflow-y: auto;
+      }
+      body.dark-mode .navbar-collapse { background: var(--gray-100); }
+      .mega-menu { position: absolute !important; left: 1rem !important; right: 1rem !important; width: auto !important; }
+    }
+
+    @media (max-width: 768px) {
+      .page-title { font-size: 2rem; }
+      .top-bar .contact-info span { margin-right: 0.75rem; font-size: 0.7rem; }
+    }
+    @media (max-width: 576px) { .top-bar { display: none; } }
+
+    .bg-light { background-color: var(--light-bg) !important; }
+    .text-success { color: var(--primary) !important; }
+    .btn-success { background: var(--primary); border: none; }
+    .btn-success:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+    .btn-outline-success { border-color: var(--primary); color: var(--primary); }
+    .btn-outline-success:hover { background: var(--primary); color: white; }
+  </style>
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+  <div><div class="loader-logo"><i class="fas fa-hand-holding-heart"></i></div>
+  <div class="loader-spinner"></div>
+  <div style="color: white;">Loading...</div></div>
+</div>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="contact-info">
+          <span><i class="fas fa-phone-alt"></i> +1 800 555 1234</span>
+          <span><i class="fas fa-envelope"></i> info@hopenexus.org</span>
+          <span class="d-none d-md-inline"><i class="fas fa-clock"></i> Mon-Fri: 9AM-6PM</span>
+        </div>
+      </div>
+      <div class="col-md-6 text-end">
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <i class="fas fa-hand-holding-heart"></i> <span>Hope<span class="text-gradient">Nexus</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown mega-dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">About</a>
+          <div class="dropdown-menu mega-menu">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3 col-6">
+                  <div class="mega-menu-title"><i class="fas fa-info-circle"></i> About Us</div>
+                  <ul><li><a href="our-story.html">Our Story</a></li><li><a href="mission-vision.html">Mission & Vision</a></li><li><a href="core-values.html">Core Values</a></li><li><a href="history.html">History</a></li></ul>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="mega-menu-title"><i class="fas fa-chart-line"></i> Reports</div>
+                  <ul><li><a href="annual-reports.html">Annual Reports</a></li><li><a href="financial-statements.html">Financial Statements</a></li><li><a href="impact-reports.html">Impact Reports</a></li></ul>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="mega-menu-title"><i class="fas fa-users"></i> Leadership</div>
+                  <ul><li><a href="board-of-directors.html">Board of Directors</a></li><li><a href="executive-team.html">Executive Team</a></li></ul>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="mega-menu-title"><i class="fas fa-handshake"></i> Partnerships</div>
+                  <ul><li><a href="our-partners.html">Our Partners</a></li><li><a href="#">Become a Partner</a></li><li><a href="#">Corporate Partnerships</a></li></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">What We Do</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">All Causes</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Education</a></li>
+            <li><a class="dropdown-item" href="#">Healthcare</a></li>
+            <li><a class="dropdown-item" href="#">Women Empowerment</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Get Involved</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#donateModal">Donate</a></li>
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#volunteerModal">Volunteer</a></li>
+            <li><a class="dropdown-item" href="#">Fundraise</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-buttons ms-3 d-flex gap-2">
+        <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#donateModal"><i class="fas fa-heart"></i> Donate</button>
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#volunteerModal"><i class="fas fa-hands-helping"></i> Volunteer</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h1 class="page-title animate__animated animate__fadeInUp">Our Partners</h1>
+        <p class="animate__animated animate__fadeInUp animate__delay-1s">Together we achieve more - Collaborating for lasting global impact</p>
+        <div class="page-breadcrumb animate__animated animate__fadeInUp animate__delay-2s">
+          <a href="index.html">Home</a> / <a href="about.html">About</a> / <span>Our Partners</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Introduction Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-7" data-aos="fade-right">
+        <div class="section-badge"><span>Collaboration</span></div>
+        <h2 class="section-title">Stronger Together</h2>
+        <p class="lead">At HopeNexus, we believe that lasting change requires collective action. Our partnerships amplify our impact and extend our reach.</p>
+        <p>We work with a diverse network of corporations, foundations, NGOs, government agencies, and academic institutions who share our commitment to creating a better world. Together, we've impacted over 500,000 lives across 35+ countries.</p>
+        <div class="row mt-4 g-3">
+          <div class="col-sm-4">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-handshake fa-2x text-success me-3"></i>
+              <div><strong>150+</strong><br><small>Active Partners</small></div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-globe fa-2x text-success me-3"></i>
+              <div><strong>35+</strong><br><small>Countries</small></div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-chart-line fa-2x text-success me-3"></i>
+              <div><strong>$15M+</strong><br><small>Combined Investment</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5" data-aos="fade-left">
+        <div class="bg-light p-4 rounded-4 text-center">
+          <i class="fas fa-quote-left fa-2x text-success mb-3"></i>
+          <p class="lead fst-italic">"Partnership is the cornerstone of our success. Together with our partners, we're building a world where everyone thrives."</p>
+          <h5 class="mt-3">— Dr. Sarah Chen</h5>
+          <p class="text-muted">Founder & CEO</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Corporate Partners -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="partner-category">
+      <h2 class="partner-category-title" data-aos="fade-up"><i class="fas fa-building me-2"></i> Corporate Partners</h2>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=Google" class="partner-logo" alt="Google">
+            <h4 class="partner-name">Google.org</h4>
+            <p class="partner-description">Technology support and grants for education programs</p>
+            <span class="partner-category-badge">Strategic Partner</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=Microsoft" class="partner-logo" alt="Microsoft">
+            <h4 class="partner-name">Microsoft</h4>
+            <p class="partner-description">Digital literacy and technology access programs</p>
+            <span class="partner-category-badge">Technology Partner</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=Coca-Cola" class="partner-logo" alt="Coca-Cola">
+            <h4 class="partner-name">Coca-Cola Foundation</h4>
+            <p class="partner-description">Water access and community development initiatives</p>
+            <span class="partner-category-badge">Community Partner</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=Amazon" class="partner-logo" alt="Amazon">
+            <h4 class="partner-name">Amazon</h4>
+            <p class="partner-description">Logistics support and in-kind donations</p>
+            <span class="partner-category-badge">Logistics Partner</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=IBM" class="partner-logo" alt="IBM">
+            <h4 class="partner-name">IBM</h4>
+            <p class="partner-description">Data analytics and AI for impact measurement</p>
+            <span class="partner-category-badge">Data Partner</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=Johnson+&+Johnson" class="partner-logo" alt="Johnson & Johnson">
+            <h4 class="partner-name">Johnson & Johnson</h4>
+            <p class="partner-description">Medical supplies and healthcare initiatives</p>
+            <span class="partner-category-badge">Healthcare Partner</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=Bank+of+America" class="partner-logo" alt="Bank of America">
+            <h4 class="partner-name">Bank of America</h4>
+            <p class="partner-description">Financial literacy and microfinance programs</p>
+            <span class="partner-category-badge">Financial Partner</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="700">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=Deloitte" class="partner-logo" alt="Deloitte">
+            <h4 class="partner-name">Deloitte</h4>
+            <p class="partner-description">Pro bono consulting and audit services</p>
+            <span class="partner-category-badge">Professional Services</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NGO & Foundation Partners -->
+<section class="py-5">
+  <div class="container">
+    <div class="partner-category">
+      <h2 class="partner-category-title" data-aos="fade-up"><i class="fas fa-hand-holding-heart me-2"></i> NGO & Foundation Partners</h2>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=UNICEF" class="partner-logo" alt="UNICEF">
+            <h4 class="partner-name">UNICEF</h4>
+            <p class="partner-description">Child protection and education collaboration</p>
+            <span class="partner-category-badge">UN Agency</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=WHO" class="partner-logo" alt="WHO">
+            <h4 class="partner-name">World Health Organization</h4>
+            <p class="partner-description">Global health initiatives and COVID response</p>
+            <span class="partner-category-badge">UN Agency</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=Red+Cross" class="partner-logo" alt="Red Cross">
+            <h4 class="partner-name">Red Cross</h4>
+            <p class="partner-description">Disaster relief and emergency response</p>
+            <span class="partner-category-badge">Humanitarian</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=Gates+Foundation" class="partner-logo" alt="Gates Foundation">
+            <h4 class="partner-name">Bill & Melinda Gates Foundation</h4>
+            <p class="partner-description">Global health and education grants</p>
+            <span class="partner-category-badge">Philanthropic</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=Save+Children" class="partner-logo" alt="Save the Children">
+            <h4 class="partner-name">Save the Children</h4>
+            <p class="partner-description">Child welfare and education programs</p>
+            <span class="partner-category-badge">NGO Partner</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=WWF" class="partner-logo" alt="WWF">
+            <h4 class="partner-name">World Wildlife Fund</h4>
+            <p class="partner-description">Environmental conservation initiatives</p>
+            <span class="partner-category-badge">Environmental</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=CARE" class="partner-logo" alt="CARE">
+            <h4 class="partner-name">CARE International</h4>
+            <p class="partner-description">Women's empowerment programs</p>
+            <span class="partner-category-badge">Women's Rights</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="700">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=World+Bank" class="partner-logo" alt="World Bank">
+            <h4 class="partner-name">World Bank</h4>
+            <p class="partner-description">Development projects and research</p>
+            <span class="partner-category-badge">Development</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Academic & Research Partners -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="partner-category">
+      <h2 class="partner-category-title" data-aos="fade-up"><i class="fas fa-university me-2"></i> Academic & Research Partners</h2>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=Harvard" class="partner-logo" alt="Harvard University">
+            <h4 class="partner-name">Harvard University</h4>
+            <p class="partner-description">Impact research and program evaluation</p>
+            <span class="partner-category-badge">Research Partner</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=Oxford" class="partner-logo" alt="Oxford University">
+            <h4 class="partner-name">Oxford University</h4>
+            <p class="partner-description">Public health research collaboration</p>
+            <span class="partner-category-badge">Research Partner</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=MIT" class="partner-logo" alt="MIT">
+            <h4 class="partner-name">MIT</h4>
+            <p class="partner-description">Technology and innovation programs</p>
+            <span class="partner-category-badge">Innovation Partner</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=Columbia" class="partner-logo" alt="Columbia University">
+            <h4 class="partner-name">Columbia University</h4>
+            <p class="partner-description">Sustainable development research</p>
+            <span class="partner-category-badge">Research Partner</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Government Partners -->
+<section class="py-5">
+  <div class="container">
+    <div class="partner-category">
+      <h2 class="partner-category-title" data-aos="fade-up"><i class="fas fa-landmark me-2"></i> Government Partners</h2>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=USAID" class="partner-logo" alt="USAID">
+            <h4 class="partner-name">USAID</h4>
+            <p class="partner-description">Development and humanitarian assistance</p>
+            <span class="partner-category-badge">Government Agency</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=DFID" class="partner-logo" alt="DFID">
+            <h4 class="partner-name">UK Aid (FCDO)</h4>
+            <p class="partner-description">International development programs</p>
+            <span class="partner-category-badge">Government Agency</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=UN" class="partner-logo" alt="United Nations">
+            <h4 class="partner-name">United Nations</h4>
+            <p class="partner-description">SDG implementation and advocacy</p>
+            <span class="partner-category-badge">UN Agency</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/120x80?text=EU" class="partner-logo" alt="European Union">
+            <h4 class="partner-name">European Union</h4>
+            <p class="partner-description">Regional development programs</p>
+            <span class="partner-category-badge">Regional Partner</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Partner Testimonials -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-badge mx-auto"><span>What Partners Say</span></div>
+      <h2 class="section-title">Partner Testimonials</h2>
+      <p class="section-subtitle">Voices from our valued collaborators</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left"></i>
+          <p>"HopeNexus is an exceptional partner. Their dedication to education and transparency makes them a trusted collaborator in our shared mission."</p>
+          <h5 class="mt-3">Sarah Johnson</h5>
+          <p class="text-muted">Director, Google.org</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left"></i>
+          <p>"The impact of our partnership with HopeNexus has been remarkable. Together, we've reached millions with life-saving healthcare interventions."</p>
+          <h5 class="mt-3">Dr. Michael Chen</h5>
+          <p class="text-muted">WHO Representative</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left"></i>
+          <p>"HopeNexus brings expertise, passion, and accountability to every project. We're proud to support their women's empowerment programs."</p>
+          <h5 class="mt-3">Lisa Thompson</h5>
+          <p class="text-muted">Gates Foundation</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Become a Partner -->
+<section class="py-5">
+  <div class="container">
+    <div class="become-partner-card" data-aos="zoom-in">
+      <i class="fas fa-handshake fa-4x mb-4"></i>
+      <h2 class="display-5 fw-bold mb-3">Become a Partner</h2>
+      <p class="lead mb-4">Join our network of global partners committed to creating lasting change. Together, we can amplify our impact and reach more communities in need.</p>
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-8">
+          <div class="row g-3 text-center">
+            <div class="col-md-4">
+              <div class="bg-white bg-opacity-20 rounded-3 p-3">
+                <h4>Corporate</h4>
+                <small>Partnerships</small>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="bg-white bg-opacity-20 rounded-3 p-3">
+                <h4>Foundation</h4>
+                <small>Grants</small>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="bg-white bg-opacity-20 rounded-3 p-3">
+                <h4>NGO</h4>
+                <small>Collaboration</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#partnerModal">Become a Partner <i class="fas fa-arrow-right ms-2"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="footer-widget">
+          <h3 class="footer-logo"><i class="fas fa-hand-holding-heart text-success"></i> Hope<span class="text-success">Nexus</span></h3>
+          <p>Building a better tomorrow through compassion, action, and sustainable development.</p>
+          <div class="footer-social mt-3">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <div class="footer-widget">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="annual-reports.html">Annual Reports</a></li>
+            <li><a href="our-partners.html">Our Partners</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-6">
+        <div class="footer-widget">
+          <h4>Get Involved</h4>
+          <ul>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#donateModal">Donate</a></li>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#volunteerModal">Volunteer</a></li>
+            <li><a href="#">Fundraise</a></li>
+            <li><a href="#">Partnership</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="footer-widget">
+          <h4>Contact Info</h4>
+          <ul class="contact-info">
+            <li><i class="fas fa-map-marker-alt text-success me-2"></i> 123 Hope Street, NY 10001</li>
+            <li><i class="fas fa-phone text-success me-2"></i> +1 800 555 1234</li>
+            <li><i class="fas fa-envelope text-success me-2"></i> info@hopenexus.org</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 HopeNexus Foundation. All rights reserved. | EIN: 88-1234567</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Partner Modal -->
+<div class="modal fade" id="partnerModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title"><i class="fas fa-handshake"></i> Become a Partner</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <form id="partnerForm">
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Organization Name" required>
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Contact Person" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Email Address" required>
+          </div>
+          <div class="mb-3">
+            <select class="form-select">
+              <option>Select Partnership Type</option>
+              <option>Corporate Partnership</option>
+              <option>Foundation Grant</option>
+              <option>NGO Collaboration</option>
+              <option>Government Agency</option>
+              <option>Academic Institution</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" rows="3" placeholder="Tell us about your organization and how you'd like to partner"></textarea>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Submit Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Donation Modal -->
+<div class="modal fade" id="donateModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title"><i class="fas fa-heart"></i> Make a Donation</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <form id="donationForm">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label fw-bold">Select Amount</label>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <button type="button" class="amount-btn btn btn-outline-success" data-amount="10">$10</button>
+                <button type="button" class="amount-btn btn btn-outline-success" data-amount="25">$25</button>
+                <button type="button" class="amount-btn btn btn-outline-success" data-amount="50">$50</button>
+                <button type="button" class="amount-btn btn btn-outline-success" data-amount="100">$100</button>
+              </div>
+              <input type="number" class="form-control" id="customAmount" placeholder="Custom Amount">
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="checkbox" id="monthly">
+                <label class="form-check-label">Make this monthly</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3"><input type="text" class="form-control" placeholder="Full Name" required></div>
+              <div class="mb-3"><input type="email" class="form-control" placeholder="Email Address" required></div>
+              <div class="mb-3"><input type="tel" class="form-control" placeholder="Phone Number"></div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success w-100 mt-3">Donate Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Volunteer Modal -->
+<div class="modal fade" id="volunteerModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title"><i class="fas fa-hands-helping"></i> Volunteer With Us</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <form id="volunteerForm">
+          <div class="mb-3"><input type="text" class="form-control" placeholder="Full Name" required></div>
+          <div class="mb-3"><input type="email" class="form-control" placeholder="Email Address" required></div>
+          <div class="mb-3">
+            <select class="form-select">
+              <option>Select your interest area</option>
+              <option>Education & Teaching</option>
+              <option>Healthcare & Medical</option>
+              <option>Fundraising</option>
+              <option>Event Management</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Submit Application</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Floating Buttons -->
+<div class="floating-buttons">
+  <div class="floating-btn" id="darkModeToggle"><i class="fas fa-moon"></i></div>
+  <div class="floating-btn" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+  <div class="floating-btn" id="whatsappBtn"><i class="fab fa-whatsapp"></i></div>
+  <div class="floating-btn" id="shareBtn"><i class="fas fa-share-alt"></i></div>
+</div>
+
+<!-- Toast Container -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({ duration: 1000, once: true, offset: 100 });
+  
+  $(window).on('load', function() { $('#preloader').fadeOut('slow'); });
+  
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) $('#mainNav').addClass('scrolled');
+    else $('#mainNav').removeClass('scrolled');
+  });
+  
+  $('#backToTop').click(function() { $('html, body').animate({ scrollTop: 0 }, 500); });
+  $(window).scroll(function() { if ($(this).scrollTop() > 300) $('#backToTop').fadeIn(); else $('#backToTop').fadeOut(); });
+  
+  $('#darkModeToggle').click(function() {
+    $('body').toggleClass('dark-mode');
+    if ($('body').hasClass('dark-mode')) $(this).html('<i class="fas fa-sun"></i>');
+    else $(this).html('<i class="fas fa-moon</i>');
+    localStorage.setItem('darkMode', $('body').hasClass('dark-mode'));
+  });
+  if (localStorage.getItem('darkMode') === 'true') { $('body').addClass('dark-mode'); $('#darkModeToggle').html('<i class="fas fa-sun"></i>'); }
+  
+  $('#whatsappBtn').click(function() { window.open('https://wa.me/18005551234?text=Hello%20HopeNexus', '_blank'); });
+  
+  $('#shareBtn').click(function() {
+    if (navigator.share) navigator.share({ title: 'HopeNexus Partners', text: 'Meet the amazing partners of HopeNexus Foundation!', url: window.location.href });
+    else alert('Share this page: ' + window.location.href);
+  });
+  
+  $('.amount-btn').click(function() {
+    $('.amount-btn').removeClass('active');
+    $(this).addClass('active');
+    $('#customAmount').val($(this).data('amount'));
+  });
+  
+  function showToast(message, type = 'success') {
+    var toast = $('<div class="toast align-items-center text-white bg-' + type + ' border-0" role="alert"><div class="d-flex"><div class="toast-body">' + message + '</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button></div></div>');
+    $('.toast-container').append(toast);
+    new bootstrap.Toast(toast[0], { delay: 3000 }).show();
+    setTimeout(function() { toast.remove(); }, 3500);
+  }
+  
+  $('#donationForm').submit(function(e) { e.preventDefault(); showToast('Thank you for your generous donation!'); $('#donateModal').modal('hide'); this.reset(); });
+  $('#volunteerForm').submit(function(e) { e.preventDefault(); showToast('Application submitted! We\'ll contact you soon.'); $('#volunteerModal').modal('hide'); this.reset(); });
+  $('#partnerForm').submit(function(e) { e.preventDefault(); showToast('Thank you for your interest! We\'ll contact you within 5 business days.'); $('#partnerModal').modal('hide'); this.reset(); });
+</script>
+</body>
+</html>

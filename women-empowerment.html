@@ -1,0 +1,1001 @@
+I'll create a comprehensive Women Empowerment page showcasing programs, impact, success stories, and ways to support women's economic and social advancement.
+
+## **women-empowerment.html**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="description" content="HopeNexus Foundation's Women Empowerment Programs - Transforming lives through education, entrepreneurship, leadership training, and economic opportunities for women and girls worldwide.">
+  <meta name="keywords" content="women empowerment, girls education, women entrepreneurship, microfinance, leadership training, gender equality, women's rights">
+  <meta name="author" content="HopeNexus Foundation">
+  <meta name="theme-color" content="#2e7d32">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Women Empowerment | HopeNexus Foundation - Transforming Lives, Building Futures">
+  <meta property="og:site_name" content="HopeNexus Foundation">
+  <meta property="og:description" content="Empowering women and girls through education, entrepreneurship, leadership training, and economic opportunities. 50,000+ women trained, 8,500+ businesses started.">
+  <meta property="og:image" content="https://picsum.photos/id/29/1200/630">
+  <meta property="og:url" content="https://www.hopenexus.org/women-empowerment.html">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Women Empowerment | HopeNexus Foundation">
+  <meta name="twitter:description" content="Empowering women to reach their full potential.">
+  
+  <title>Women Empowerment | HopeNexus Foundation - Transforming Lives, Building Futures</title>
+  
+  <!-- CSS Dependencies -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #2e7d32;
+      --primary-dark: #1b5e20;
+      --primary-light: #4caf50;
+      --primary-ultra-light: #e8f5e9;
+      --secondary: #1976d2;
+      --accent: #f57c00;
+      --danger: #f44336;
+      --warning: #ffc107;
+      --info: #2196f3;
+      --pink: #e91e63;
+      --pink-light: #fce4ec;
+      --white: #ffffff;
+      --light-bg: #f8f9fa;
+      --gray-100: #f5f5f5;
+      --gray-200: #eeeeee;
+      --gray-300: #e0e0e0;
+      --gray-400: #bdbdbd;
+      --gray-500: #9e9e9e;
+      --gray-600: #757575;
+      --gray-700: #616161;
+      --gray-800: #424242;
+      --gray-900: #212121;
+      --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+      --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+      --shadow-xl: 0 20px 25px rgba(0,0,0,0.15);
+      --radius-sm: 0.375rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 0.75rem;
+      --radius-xl: 1rem;
+      --radius-2xl: 1.5rem;
+      --radius-full: 9999px;
+      --transition-fast: 0.2s ease;
+      --transition-base: 0.3s ease;
+    }
+
+    body.dark-mode {
+      --white: #1a1a2e;
+      --light-bg: #16213e;
+      --gray-100: #1e293b;
+      --gray-200: #334155;
+      --gray-300: #475569;
+      --gray-600: #cbd5e1;
+      --gray-700: #e2e8f0;
+      --gray-800: #f1f5f9;
+      --gray-900: #f8fafc;
+      --pink-light: #311b2d;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      overflow-x: hidden;
+      background-color: var(--white);
+      color: var(--gray-800);
+      transition: background-color var(--transition-base), color var(--transition-base);
+    }
+
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: var(--gray-200); }
+    ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: var(--radius-full); }
+    ::-webkit-scrollbar-thumb:hover { background: var(--primary-dark); }
+
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--primary);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.5s;
+    }
+    .loader-logo { font-size: 4rem; color: white; margin-bottom: 1rem; animation: pulse 1.5s infinite; }
+    @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.8; } }
+    .loader-spinner {
+      width: 50px; height: 50px; border: 3px solid rgba(255,255,255,0.3);
+      border-top-color: white; border-radius: 50%; margin: 1rem auto;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .top-bar {
+      background: var(--gray-900);
+      color: var(--white);
+      padding: 0.5rem 0;
+      font-size: 0.875rem;
+    }
+    .top-bar .contact-info span { margin-right: 1.5rem; }
+    .top-bar .contact-info i { margin-right: 0.25rem; color: var(--primary-light); }
+    .social-icons a { color: var(--white); margin-left: 1rem; transition: var(--transition-fast); display: inline-block; }
+    .social-icons a:hover { color: var(--primary-light); transform: translateY(-2px); }
+
+    .navbar {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-base);
+      padding: 1rem 0;
+    }
+    .navbar.scrolled { padding: 0.5rem 0; box-shadow: var(--shadow-lg); }
+    body.dark-mode .navbar { background: rgba(26,26,46,0.95); }
+    .navbar-brand { font-size: 1.75rem; font-weight: 800; }
+    .navbar-brand i { color: var(--primary); }
+    .navbar-brand span { background: linear-gradient(135deg, var(--gray-900), var(--primary)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-link { font-weight: 600; margin: 0 0.5rem; position: relative; }
+    .nav-link::before {
+      content: ''; position: absolute; bottom: -5px; left: 50%; transform: translateX(-50%);
+      width: 0; height: 2px; background: var(--primary); transition: width var(--transition-base);
+    }
+    .nav-link:hover::before, .nav-link.active::before { width: 80%; }
+
+    .mega-dropdown { position: static; }
+    @media (min-width: 992px) {
+      .mega-menu {
+        width: 100%; left: 0; right: 0; padding: 2rem;
+        border: none; border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+        box-shadow: var(--shadow-xl);
+      }
+    }
+    .mega-menu-title { font-weight: 700; margin-bottom: 1rem; color: var(--primary); }
+    .mega-menu ul { list-style: none; padding: 0; }
+    .mega-menu ul li { margin-bottom: 0.5rem; }
+    .mega-menu ul li a { color: var(--gray-700); transition: var(--transition-fast); text-decoration: none; }
+    .mega-menu ul li a:hover { color: var(--primary); padding-left: 0.5rem; }
+
+    .page-header {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      padding: 120px 0 60px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 1%, transparent 1%);
+      background-size: 50px 50px;
+      animation: moveBackground 20s linear infinite;
+    }
+    @keyframes moveBackground {
+      from { transform: translate(0, 0); }
+      to { transform: translate(50px, 50px); }
+    }
+    .page-title { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; position: relative; z-index: 1; }
+    .page-breadcrumb { position: relative; z-index: 1; }
+    .page-breadcrumb a { color: white; text-decoration: none; opacity: 0.8; }
+    .page-breadcrumb a:hover { opacity: 1; }
+
+    .section-badge { display: inline-block; margin-bottom: 1rem; }
+    .section-badge span {
+      background: var(--primary-ultra-light);
+      color: var(--primary);
+      padding: 0.25rem 1.5rem;
+      border-radius: var(--radius-full);
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+    .section-title { font-size: 2.5rem; margin-bottom: 1rem; }
+    .section-subtitle { font-size: 1.125rem; color: var(--gray-600); margin-bottom: 2rem; }
+    @media (max-width: 768px) { .section-title { font-size: 1.75rem; } }
+
+    .impact-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: 2rem;
+      text-align: center;
+      transition: var(--transition-base);
+      height: 100%;
+      box-shadow: var(--shadow-md);
+    }
+    .impact-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-xl); }
+    .impact-number { font-size: 3rem; font-weight: 800; color: var(--primary); }
+
+    .program-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition-base);
+      height: 100%;
+    }
+    .program-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-xl); }
+    .program-image { height: 220px; overflow: hidden; }
+    .program-image img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition-fast); }
+    .program-card:hover .program-image img { transform: scale(1.05); }
+    .program-content { padding: 1.5rem; }
+
+    .story-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition-base);
+      height: 100%;
+    }
+    .story-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-xl); }
+    .story-image { height: 200px; overflow: hidden; }
+    .story-image img { width: 100%; height: 100%; object-fit: cover; }
+    .story-content { padding: 1.5rem; }
+
+    .footer {
+      background: var(--gray-900);
+      color: var(--gray-400);
+      padding-top: 4rem;
+    }
+    .footer-logo { font-size: 1.75rem; font-weight: 800; margin-bottom: 1.5rem; }
+    .footer-widget h4 { color: white; margin-bottom: 1.5rem; font-size: 1.25rem; }
+    .footer-widget ul { list-style: none; padding: 0; }
+    .footer-widget ul li { margin-bottom: 0.5rem; }
+    .footer-widget ul li a { color: var(--gray-400); transition: var(--transition-fast); text-decoration: none; }
+    .footer-widget ul li a:hover { color: var(--primary); padding-left: 0.5rem; }
+    .footer-bottom { margin-top: 3rem; padding: 1.5rem 0; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; }
+
+    .floating-buttons {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .floating-btn {
+      width: 50px; height: 50px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition-base);
+      box-shadow: var(--shadow-lg);
+      border: none;
+    }
+    .floating-btn:hover { transform: scale(1.1); background: var(--primary-dark); }
+    @media (max-width: 768px) { .floating-btn { width: 40px; height: 40px; } }
+
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: var(--white);
+        padding: 1rem;
+        border-radius: var(--radius-lg);
+        margin-top: 1rem;
+        max-height: 70vh;
+        overflow-y: auto;
+      }
+      body.dark-mode .navbar-collapse { background: var(--gray-100); }
+      .mega-menu { position: absolute !important; left: 1rem !important; right: 1rem !important; width: auto !important; }
+    }
+
+    @media (max-width: 768px) {
+      .page-title { font-size: 2rem; }
+      .top-bar .contact-info span { margin-right: 0.75rem; font-size: 0.7rem; }
+      .impact-number { font-size: 2rem; }
+    }
+    @media (max-width: 576px) { .top-bar { display: none; } }
+
+    .bg-light { background-color: var(--light-bg) !important; }
+    .text-success { color: var(--primary) !important; }
+    .btn-success { background: var(--primary); border: none; }
+    .btn-success:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+    .btn-outline-success { border-color: var(--primary); color: var(--primary); }
+    .btn-outline-success:hover { background: var(--primary); color: white; }
+  </style>
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+  <div><div class="loader-logo"><i class="fas fa-hand-holding-heart"></i></div>
+  <div class="loader-spinner"></div>
+  <div style="color: white;">Loading...</div></div>
+</div>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="contact-info">
+          <span><i class="fas fa-phone-alt"></i> +1 800 555 1234</span>
+          <span><i class="fas fa-envelope"></i> women@hopenexus.org</span>
+          <span class="d-none d-md-inline"><i class="fas fa-clock"></i> Mon-Fri: 9AM-6PM</span>
+        </div>
+      </div>
+      <div class="col-md-6 text-end">
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <i class="fas fa-hand-holding-heart"></i> <span>Hope<span class="text-gradient">Nexus</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown mega-dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">About</a>
+          <div class="dropdown-menu mega-menu">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3 col-6">
+                  <div class="mega-menu-title"><i class="fas fa-info-circle"></i> About Us</div>
+                  <ul><li><a href="our-story.html">Our Story</a></li><li><a href="mission-vision.html">Mission & Vision</a></li><li><a href="core-values.html">Core Values</a></li><li><a href="history.html">History</a></li></ul>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="mega-menu-title"><i class="fas fa-chart-line"></i> Reports</div>
+                  <ul><li><a href="annual-reports.html">Annual Reports</a></li><li><a href="financial-statements.html">Financial Statements</a></li><li><a href="impact-reports.html">Impact Reports</a></li></ul>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="mega-menu-title"><i class="fas fa-users"></i> Leadership</div>
+                  <ul><li><a href="board-of-directors.html">Board of Directors</a></li><li><a href="executive-team.html">Executive Team</a></li></ul>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="mega-menu-title"><i class="fas fa-handshake"></i> Partnerships</div>
+                  <ul><li><a href="our-partners.html">Our Partners</a></li><li><a href="become-a-partner.html">Become a Partner</a></li><li><a href="corporate-partnerships.html">Corporate Partnerships</a></li></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">What We Do</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">All Causes</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="education.html">Education</a></li>
+            <li><a class="dropdown-item" href="healthcare.html">Healthcare</a></li>
+            <li><a class="dropdown-item" href="women-empowerment.html">Women Empowerment</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Get Involved</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#donateModal">Donate</a></li>
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#volunteerModal">Volunteer</a></li>
+            <li><a class="dropdown-item" href="#">Fundraise</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-buttons ms-3 d-flex gap-2">
+        <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#donateModal"><i class="fas fa-heart"></i> Donate</button>
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#volunteerModal"><i class="fas fa-hands-helping"></i> Volunteer</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h1 class="page-title animate__animated animate__fadeInUp">Women Empowerment</h1>
+        <p class="animate__animated animate__fadeInUp animate__delay-1s">Transforming lives, building futures, and creating lasting change for women and girls worldwide</p>
+        <div class="page-breadcrumb animate__animated animate__fadeInUp animate__delay-2s">
+          <a href="index.html">Home</a> / <a href="#">What We Do</a> / <span>Women Empowerment</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Introduction Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-7" data-aos="fade-right">
+        <div class="section-badge"><span>Our Commitment</span></div>
+        <h2 class="section-title">Empowering Women to Reach Their Full Potential</h2>
+        <p class="lead">When women thrive, communities thrive. Empowering women is one of the most effective ways to create lasting change.</p>
+        <p>At HopeNexus, we believe that investing in women and girls is the key to breaking the cycle of poverty. Our comprehensive women empowerment programs focus on education, entrepreneurship, leadership development, and economic opportunity.</p>
+        <p>Since launching our women's initiatives in 2016, we've trained over 50,000 women, helped start 8,500+ businesses, and distributed over $12.5 million in microfinance loans with a 98% repayment rate.</p>
+        <div class="row mt-4 g-3">
+          <div class="col-sm-4">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-chalkboard-user fa-2x text-success me-3"></i>
+              <div><strong>50,000+</strong><br><small>Women Trained</small></div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-store fa-2x text-success me-3"></i>
+              <div><strong>8,500+</strong><br><small>Businesses Started</small></div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-hand-holding-usd fa-2x text-success me-3"></i>
+              <div><strong>$12.5M</strong><br><small>Microfinance Loans</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5" data-aos="fade-left">
+        <div class="bg-light p-4 rounded-4 text-center">
+          <i class="fas fa-quote-left fa-2x text-success mb-3"></i>
+          <p class="lead fst-italic">"There is no tool for development more effective than the empowerment of women."</p>
+          <h5 class="mt-3">— Kofi Annan</h5>
+          <p class="text-muted">Former UN Secretary-General</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Impact Numbers -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-badge mx-auto"><span>Our Impact</span></div>
+      <h2 class="section-title">Women Empowerment by the Numbers</h2>
+      <p class="section-subtitle">Real results from our empowerment programs</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="impact-card">
+          <div class="impact-number">50K+</div>
+          <div class="impact-label">Women Trained</div>
+          <small class="text-muted">in vocational skills</small>
+        </div>
+      </div>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="impact-card">
+          <div class="impact-number">8,500+</div>
+          <div class="impact-label">Businesses Started</div>
+          <small class="text-muted">by women entrepreneurs</small>
+        </div>
+      </div>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="impact-card">
+          <div class="impact-number">98%</div>
+          <div class="impact-label">Loan Repayment</div>
+          <small class="text-muted">microfinance success rate</small>
+        </div>
+      </div>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="impact-card">
+          <div class="impact-number">10K+</div>
+          <div class="impact-label">Leadership Graduates</div>
+          <small class="text-muted">trained in leadership</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Programs Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-badge mx-auto"><span>Our Programs</span></div>
+      <h2 class="section-title">How We Empower Women</h2>
+      <p class="section-subtitle">Comprehensive approach to women's advancement</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="program-card">
+          <div class="program-image">
+            <img src="https://picsum.photos/id/29/400/300" alt="Vocational Training">
+          </div>
+          <div class="program-content">
+            <i class="fas fa-chalkboard-user fa-2x text-success mb-3"></i>
+            <h3>Vocational Training</h3>
+            <p>Teaching marketable skills like tailoring, computer literacy, food processing, and handicrafts to enable economic independence.</p>
+            <div class="mt-3">
+              <strong class="text-success">25,000+</strong>
+              <p class="small text-muted">women trained</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="program-card">
+          <div class="program-image">
+            <img src="https://picsum.photos/id/1/400/300" alt="Microfinance">
+          </div>
+          <div class="program-content">
+            <i class="fas fa-hand-holding-usd fa-2x text-success mb-3"></i>
+            <h3>Microfinance & Savings</h3>
+            <p>Providing small loans, savings groups, and financial literacy training to help women start and grow businesses.</p>
+            <div class="mt-3">
+              <strong class="text-success">$12.5M+</strong>
+              <p class="small text-muted">in loans distributed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="program-card">
+          <div class="program-image">
+            <img src="https://picsum.photos/id/20/400/300" alt="Leadership">
+          </div>
+          <div class="program-content">
+            <i class="fas fa-chart-line fa-2x text-success mb-3"></i>
+            <h3>Leadership Development</h3>
+            <p>Building confidence, public speaking, negotiation, and leadership skills for women to take on leadership roles.</p>
+            <div class="mt-3">
+              <strong class="text-success">10,000+</strong>
+              <p class="small text-muted">leadership graduates</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="program-card">
+          <div class="program-image">
+            <img src="https://picsum.photos/id/42/400/300" alt="Girls Education">
+          </div>
+          <div class="program-content">
+            <i class="fas fa-graduation-cap fa-2x text-success mb-3"></i>
+            <h3>Girls' Education</h3>
+            <p>Scholarships, mentorship, and support to keep girls in school and complete their education.</p>
+            <div class="mt-3">
+              <strong class="text-success">15,000+</strong>
+              <p class="small text-muted">girls supported</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="program-card">
+          <div class="program-image">
+            <img src="https://picsum.photos/id/13/400/300" alt="Legal Rights">
+          </div>
+          <div class="program-content">
+            <i class="fas fa-gavel fa-2x text-success mb-3"></i>
+            <h3>Legal Rights Education</h3>
+            <p>Teaching women about their legal rights, how to access justice, and advocating for policy change.</p>
+            <div class="mt-3">
+              <strong class="text-success">20,000+</strong>
+              <p class="small text-muted">women educated</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="program-card">
+          <div class="program-image">
+            <img src="https://picsum.photos/id/96/400/300" alt="Mentorship">
+          </div>
+          <div class="program-content">
+            <i class="fas fa-users fa-2x text-success mb-3"></i>
+            <h3>Mentorship Network</h3>
+            <p>Connecting aspiring women entrepreneurs with successful business mentors for guidance and support.</p>
+            <div class="mt-3">
+              <strong class="text-success">2,000+</strong>
+              <p class="small text-muted">mentor matches</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Success Stories -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-badge mx-auto"><span>Success Stories</span></div>
+      <h2 class="section-title">Women Rising</h2>
+      <p class="section-subtitle">Real stories of transformation and triumph</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="story-card">
+          <div class="story-image">
+            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Maria">
+          </div>
+          <div class="story-content">
+            <span class="badge bg-success mb-2">Entrepreneur</span>
+            <h4>From Borrower to Business Owner</h4>
+            <p>"With a small microfinance loan, I started my tailoring business. Today, I employ 20 women from my community and have trained over 100 women in sewing skills."</p>
+            <p class="text-muted small mt-2">— Maria, Philippines</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="story-card">
+          <div class="story-image">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Amina">
+          </div>
+          <div class="story-content">
+            <span class="badge bg-success mb-2">Education</span>
+            <h4>First in Her Family to Graduate</h4>
+            <p>"I was the first girl in my village to finish high school. Now I'm a teacher, helping other girls stay in school and pursue their dreams."</p>
+            <p class="text-muted small mt-2">— Amina, Kenya</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="story-card">
+          <div class="story-image">
+            <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Grace">
+          </div>
+          <div class="story-content">
+            <span class="badge bg-success mb-2">Leadership</span>
+            <h4>From Participant to Community Leader</h4>
+            <p>"The leadership program gave me the confidence to run for local office. Now I'm advocating for women's rights and education in my community."</p>
+            <p class="text-muted small mt-2">— Grace, Tanzania</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Where We Work -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-badge mx-auto"><span>Global Reach</span></div>
+      <h2 class="section-title">Where We Work</h2>
+      <p class="section-subtitle">Our women empowerment programs reach communities across 25+ countries</p>
+    </div>
+    
+    <div class="row text-center g-4">
+      <div class="col-md-3 col-6" data-aos="flip-up" data-aos-delay="0">
+        <i class="fas fa-globe-africa fa-3x text-success mb-3"></i>
+        <h4>Africa</h4>
+        <p><strong>Kenya, Uganda, Tanzania, Nigeria, Ghana</strong></p>
+        <p class="small text-muted">20,000+ women trained</p>
+      </div>
+      <div class="col-md-3 col-6" data-aos="flip-up" data-aos-delay="100">
+        <i class="fas fa-globe-asia fa-3x text-success mb-3"></i>
+        <h4>Asia</h4>
+        <p><strong>India, Nepal, Bangladesh, Philippines</strong></p>
+        <p class="small text-muted">18,000+ women trained</p>
+      </div>
+      <div class="col-md-3 col-6" data-aos="flip-up" data-aos-delay="200">
+        <i class="fas fa-globe-americas fa-3x text-success mb-3"></i>
+        <h4>Latin America</h4>
+        <p><strong>Guatemala, Peru, Bolivia, Honduras</strong></p>
+        <p class="small text-muted">8,000+ women trained</p>
+      </div>
+      <div class="col-md-3 col-6" data-aos="flip-up" data-aos-delay="300">
+        <i class="fas fa-globe-europe fa-3x text-success mb-3"></i>
+        <h4>Middle East</h4>
+        <p><strong>Jordan, Lebanon, Yemen</strong></p>
+        <p class="small text-muted">4,000+ women trained</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How to Help -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-badge mx-auto"><span>Get Involved</span></div>
+      <h2 class="section-title">How You Can Help Empower Women</h2>
+      <p class="section-subtitle">Every contribution helps a woman build a better future</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="impact-card">
+          <i class="fas fa-graduation-cap fa-3x text-success mb-3"></i>
+          <h4>$25</h4>
+          <p class="small">Provides school supplies for a girl for a year</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="impact-card">
+          <i class="fas fa-chalkboard-user fa-3x text-success mb-3"></i>
+          <h4>$100</h4>
+          <p class="small">Funds vocational training for one woman</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="impact-card">
+          <i class="fas fa-hand-holding-usd fa-3x text-success mb-3"></i>
+          <h4>$250</h4>
+          <p class="small">Provides a microfinance loan for a business</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="impact-card">
+          <i class="fas fa-chart-line fa-3x text-success mb-3"></i>
+          <h4>$500</h4>
+          <p class="small">Sponsors a leadership training program</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-5">
+      <button class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#donateModal">Support Women Empowerment <i class="fas fa-arrow-right ms-2"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- Partner Spotlight -->
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="section-badge"><span>Partner Spotlight</span></div>
+        <h2 class="section-title">Partners in Empowerment</h2>
+        <p>Our partners are essential to expanding our reach and impact. Together, we're creating opportunities for women around the world.</p>
+        <div class="row mt-4 g-3">
+          <div class="col-6">
+            <div class="bg-light p-3 rounded-3 text-center">
+              <h4 class="text-success">CARE International</h4>
+              <small>Women's rights collaboration</small>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="bg-light p-3 rounded-3 text-center">
+              <h4 class="text-success">Vital Voices</h4>
+              <small>Leadership training partner</small>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="bg-light p-3 rounded-3 text-center">
+              <h4 class="text-success">Kiva</h4>
+              <small>Microfinance platform</small>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="bg-light p-3 rounded-3 text-center">
+              <h4 class="text-success">UN Women</h4>
+              <small>Global advocacy partner</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <img src="https://picsum.photos/id/48/600/400" alt="Partners" class="img-fluid rounded-4 shadow-lg w-100">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5" style="background: linear-gradient(135deg, var(--primary-dark), var(--primary));">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-lg-8 mx-auto text-white">
+        <i class="fas fa-female fa-3x mb-3"></i>
+        <h2 class="display-5 fw-bold mb-4">Join Us in Empowering Women</h2>
+        <p class="lead mb-4">When you empower a woman, you empower a family, a community, and a nation.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <button class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#donateModal">Donate Today</button>
+          <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#volunteerModal">Become a Mentor</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="footer-widget">
+          <h3 class="footer-logo"><i class="fas fa-hand-holding-heart text-success"></i> Hope<span class="text-success">Nexus</span></h3>
+          <p>Building a better tomorrow through compassion, action, and sustainable development.</p>
+          <div class="footer-social mt-3">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <div class="footer-widget">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="women-empowerment.html">Women Empowerment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-6">
+        <div class="footer-widget">
+          <h4>Get Involved</h4>
+          <ul>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#donateModal">Donate</a></li>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#volunteerModal">Volunteer</a></li>
+            <li><a href="#">Fundraise</a></li>
+            <li><a href="corporate-partnerships.html">Corporate Partnerships</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="footer-widget">
+          <h4>Contact Info</h4>
+          <ul class="contact-info">
+            <li><i class="fas fa-map-marker-alt text-success me-2"></i> 123 Hope Street, NY 10001</li>
+            <li><i class="fas fa-phone text-success me-2"></i> +1 800 555 1234</li>
+            <li><i class="fas fa-envelope text-success me-2"></i> women@hopenexus.org</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 HopeNexus Foundation. All rights reserved. | EIN: 88-1234567</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Donation Modal -->
+<div class="modal fade" id="donateModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title"><i class="fas fa-heart"></i> Support Women Empowerment</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <form id="donationForm">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label fw-bold">Select Amount</label>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <button type="button" class="amount-btn btn btn-outline-success" data-amount="25">$25</button>
+                <button type="button" class="amount-btn btn btn-outline-success" data-amount="50">$50</button>
+                <button type="button" class="amount-btn btn btn-outline-success" data-amount="100">$100</button>
+                <button type="button" class="amount-btn btn btn-outline-success" data-amount="250">$250</button>
+              </div>
+              <input type="number" class="form-control" id="customAmount" placeholder="Custom Amount">
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="checkbox" id="monthly">
+                <label class="form-check-label">Make this monthly</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3"><input type="text" class="form-control" placeholder="Full Name" required></div>
+              <div class="mb-3"><input type="email" class="form-control" placeholder="Email Address" required></div>
+              <div class="mb-3"><input type="tel" class="form-control" placeholder="Phone Number"></div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success w-100 mt-3">Donate Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Volunteer Modal -->
+<div class="modal fade" id="volunteerModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title"><i class="fas fa-hands-helping"></i> Volunteer With Us</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <form id="volunteerForm">
+          <div class="mb-3"><input type="text" class="form-control" placeholder="Full Name" required></div>
+          <div class="mb-3"><input type="email" class="form-control" placeholder="Email Address" required></div>
+          <div class="mb-3">
+            <select class="form-select">
+              <option>Select your interest area</option>
+              <option>Mentorship</option>
+              <option>Skills Training</option>
+              <option>Fundraising</option>
+              <option>Administrative Support</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Submit Application</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Floating Buttons -->
+<div class="floating-buttons">
+  <div class="floating-btn" id="darkModeToggle"><i class="fas fa-moon"></i></div>
+  <div class="floating-btn" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+  <div class="floating-btn" id="whatsappBtn"><i class="fab fa-whatsapp"></i></div>
+  <div class="floating-btn" id="shareBtn"><i class="fas fa-share-alt"></i></div>
+</div>
+
+<!-- Toast Container -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({ duration: 1000, once: true, offset: 100 });
+  
+  $(window).on('load', function() { $('#preloader').fadeOut('slow'); });
+  
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) $('#mainNav').addClass('scrolled');
+    else $('#mainNav').removeClass('scrolled');
+  });
+  
+  $('#backToTop').click(function() { $('html, body').animate({ scrollTop: 0 }, 500); });
+  $(window).scroll(function() { if ($(this).scrollTop() > 300) $('#backToTop').fadeIn(); else $('#backToTop').fadeOut(); });
+  
+  $('#darkModeToggle').click(function() {
+    $('body').toggleClass('dark-mode');
+    if ($('body').hasClass('dark-mode')) $(this).html('<i class="fas fa-sun"></i>');
+    else $(this).html('<i class="fas fa-moon"></i>');
+    localStorage.setItem('darkMode', $('body').hasClass('dark-mode'));
+  });
+  if (localStorage.getItem('darkMode') === 'true') { $('body').addClass('dark-mode'); $('#darkModeToggle').html('<i class="fas fa-sun"></i>'); }
+  
+  $('#whatsappBtn').click(function() { window.open('https://wa.me/18005551234?text=Hello%20HopeNexus', '_blank'); });
+  
+  $('#shareBtn').click(function() {
+    if (navigator.share) navigator.share({ title: 'HopeNexus Women Empowerment', text: 'Support women empowerment with HopeNexus Foundation!', url: window.location.href });
+    else alert('Share this page: ' + window.location.href);
+  });
+  
+  $('.amount-btn').click(function() {
+    $('.amount-btn').removeClass('active');
+    $(this).addClass('active');
+    $('#customAmount').val($(this).data('amount'));
+  });
+  
+  function showToast(message, type = 'success') {
+    var toast = $('<div class="toast align-items-center text-white bg-' + type + ' border-0" role="alert"><div class="d-flex"><div class="toast-body">' + message + '</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button></div></div>');
+    $('.toast-container').append(toast);
+    new bootstrap.Toast(toast[0], { delay: 3000 }).show();
+    setTimeout(function() { toast.remove(); }, 3500);
+  }
+  
+  $('#donationForm').submit(function(e) { e.preventDefault(); showToast('Thank you for supporting women empowerment!'); $('#donateModal').modal('hide'); this.reset(); });
+  $('#volunteerForm').submit(function(e) { e.preventDefault(); showToast('Application submitted! We\'ll contact you soon.'); $('#volunteerModal').modal('hide'); this.reset(); });
+</script>
+</body>
+</html>
+```

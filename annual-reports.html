@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="description" content="Access HopeNexus Foundation's annual reports, financial statements, impact reports, and audit documents. Committed to transparency and accountability.">
+  <meta name="keywords" content="annual reports, financial statements, impact reports, NGO transparency, charity financials, HopeNexus reports">
+  <meta name="author" content="HopeNexus Foundation">
+  <meta name="theme-color" content="#2e7d32">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Annual Reports | HopeNexus Foundation - Transparency & Accountability">
+  <meta property="og:site_name" content="HopeNexus Foundation">
+  <meta property="og:description" content="View our annual reports, financial statements, and impact reports. We are committed to full transparency in all our operations.">
+  <meta property="og:image" content="https://picsum.photos/id/48/1200/630">
+  <meta property="og:url" content="https://www.hopenexus.org/annual-reports.html">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Annual Reports | HopeNexus Foundation">
+  <meta name="twitter:description" content="Committed to transparency. View our financial and impact reports.">
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "HopeNexus Foundation",
+    "url": "https://www.hopenexus.org",
+    "taxID": "88-1234567",
+    "financialReports": [
+      {"@type": "Report", "name": "Annual Report 2023", "datePublished": "2024-03-15"},
+      {"@type": "Report", "name": "Audited Financial Statements 2023", "datePublished": "2024-02-28"}
+    ]
+  }
+  </script>
+  
+  <title>Annual Reports | HopeNexus Foundation - Transparency & Accountability</title>
+  
+  <!-- CSS Dependencies -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  
+  <style>
+    /* ============================================
+       CSS VARIABLES & RESET
+    ============================================ */
+    :root {
+      --primary: #2e7d32;
+      --primary-dark: #1b5e20;
+      --primary-light: #4caf50;
+      --primary-ultra-light: #e8f5e9;
+      --secondary: #1976d2;
+      --accent: #f57c00;
+      --danger: #f44336;
+      --warning: #ffc107;
+      --white: #ffffff;
+      --light-bg: #f8f9fa;
+      --gray-100: #f5f5f5;
+      --gray-200: #eeeeee;
+      --gray-300: #e0e0e0;
+      --gray-400: #bdbdbd;
+      --gray-500: #9e9e9e;
+      --gray-600: #757575;
+      --gray-700: #616161;
+      --gray-800: #424242;
+      --gray-900: #212121;
+      --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+      --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+      --shadow-xl: 0 20px 25px rgba(0,0,0,0.15);
+      --radius-sm: 0.375rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 0.75rem;
+      --radius-xl: 1rem;
+      --radius-2xl: 1.5rem;
+      --radius-full: 9999px;
+      --transition-fast: 0.2s ease;
+      --transition-base: 0.3s ease;
+    }
+
+    body.dark-mode {
+      --white: #1a1a2e;
+      --light-bg: #16213e;
+      --gray-100: #1e293b;
+      --gray-200: #334155;
+      --gray-300: #475569;
+      --gray-600: #cbd5e1;
+      --gray-700: #e2e8f0;
+      --gray-800: #f1f5f9;
+      --gray-900: #f8fafc;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      overflow-x: hidden;
+      background-color: var(--white);
+      color: var(--gray-800);
+      transition: background-color var(--transition-base), color var(--transition-base);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: var(--gray-200); }
+    ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: var(--radius-full); }
+    ::-webkit-scrollbar-thumb:hover { background: var(--primary-dark); }
+
+    /* Preloader */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--primary);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.5s;
+    }
+    .loader-logo { font-size: 4rem; color: white; margin-bottom: 1rem; animation: pulse 1.5s infinite; }
+    @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.8; } }
+    .loader-spinner {
+      width: 50px; height: 50px; border: 3px solid rgba(255,255,255,0.3);
+      border-top-color: white; border-radius: 50%; margin: 1rem auto;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Top Bar */
+    .top-bar {
+      background: var(--gray-900);
+      color: var(--white);
+      padding: 0.5rem 0;
+      font-size: 0.875rem;
+    }
+    .top-bar .contact-info span { margin-right: 1.5rem; }
+    .top-bar .contact-info i { margin-right: 0.25rem; color: var(--primary-light); }
+    .social-icons a { color: var(--white); margin-left: 1rem; transition: var(--transition-fast); display: inline-block; }
+    .social-icons a:hover { color: var(--primary-light); transform: translateY(-2px); }
+
+    /* Navigation */
+    .navbar {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-base);
+      padding: 1rem 0;
+    }
+    .navbar.scrolled { padding: 0.5rem 0; box-shadow: var(--shadow-lg); }
+    body.dark-mode .navbar { background: rgba(26,26,46,0.95); }
+    .navbar-brand { font-size: 1.75rem; font-weight: 800; }
+    .navbar-brand i { color: var(--primary); }
+    .navbar-brand span { background: linear-gradient(135deg, var(--gray-900), var(--primary)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-link { font-weight: 600; margin: 0 0.5rem; position: relative; }
+    .nav-link::before {
+      content: ''; position: absolute; bottom: -5px; left: 50%; transform: translateX(-50%);
+      width: 0; height: 2px; background: var(--primary); transition: width var(--transition-base);
+    }
+    .nav-link:hover::before, .nav-link.active::before { width: 80%; }
+
+    /* Mega Dropdown */
+    .mega-dropdown { position: static; }
+    @media (min-width: 992px) {
+      .mega-menu {
+        width: 100%; left: 0; right: 0; padding: 2rem;
+        border: none; border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+        box-shadow: var(--shadow-xl);
+      }
+    }
+    .mega-menu-title { font-weight: 700; margin-bottom: 1rem; color: var(--primary); }
+    .mega-menu ul { list-style: none; padding: 0; }
+    .mega-menu ul li { margin-bottom: 0.5rem; }
+    .mega-menu ul li a { color: var(--gray-700); transition: var(--transition-fast); text-decoration: none; }
+    .mega-menu ul li a:hover { color: var(--primary); padding-left: 0.5rem; }
+
+    /* Page Header */
+    .page-header {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      padding: 120px 0 60px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 1%, transparent 1%);
+      background-size: 50px 50px;
+      animation: moveBackground 20s linear infinite;
+    }
+    @keyframes moveBackground {
+      from { transform: translate(0, 0); }
+      to { transform: translate(50px, 50px); }
+    }
+    .page-title { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; position: relative; z-index: 1; }
+    .page-breadcrumb { position: relative; z-index: 1; }
+    .page-breadcrumb a { color: white; text-decoration: none; opacity: 0.8; }
+    .page-breadcrumb a:hover { opacity: 1; }
+
+    /* Section Styles */
+    .section-badge { display: inline-block; margin-bottom: 1rem; }
+    .section-badge span {
+      background: var(--primary-ultra-light);
+      color: var(--primary);
+      padding: 0.25rem 1.5rem;
+      border-radius: var(--radius-full);
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+    .section-title { font-size: 2.5rem; margin-bottom: 1rem; }
+    .section-subtitle { font-size: 1.125rem; color: var(--gray-600); margin-bottom: 2rem; }
+    @media (max-width: 768px) { .section-title { font-size: 1.75rem; } }
+
+    /* Report Cards */
+    .report-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition-base);
+      height: 100%;
+      position: relative;
+    }
+    .report-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-xl); }
+    .report-icon {
+      background: var(--primary-ultra-light);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .report-icon i { font-size: 3rem; color: var(--primary); }
+    .report-content { padding: 1.5rem; }
+    .report-year { 
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 0.25rem 1rem;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .report-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .report-description { font-size: 0.875rem; color: var(--gray-600); margin-bottom: 1rem; }
+    .report-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      margin-bottom: 1rem;
+    }
+    .btn-download {
+      width: 100%;
+      padding: 0.75rem;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: var(--radius-md);
+      transition: var(--transition-fast);
+      font-weight: 600;
+    }
+    .btn-download:hover { background: var(--primary-dark); transform: translateY(-2px); }
+
+    /* Financial Stats Cards */
+    .stat-box {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 1.5rem;
+      text-align: center;
+      transition: var(--transition-base);
+      height: 100%;
+    }
+    .stat-box:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    .stat-number { font-size: 2rem; font-weight: 800; color: var(--primary); }
+    .stat-label { font-size: 0.875rem; color: var(--gray-600); margin-top: 0.5rem; }
+
+    /* Certification Badges */
+    .badge-card {
+      text-align: center;
+      padding: 1.5rem;
+      transition: var(--transition-base);
+    }
+    .badge-card img { max-height: 80px; margin-bottom: 1rem; filter: grayscale(100%); transition: var(--transition-fast); }
+    .badge-card:hover img { filter: grayscale(0); }
+
+    /* Footer */
+    .footer {
+      background: var(--gray-900);
+      color: var(--gray-400);
+      padding-top: 4rem;
+    }
+    .footer-logo { font-size: 1.75rem; font-weight: 800; margin-bottom: 1.5rem; }
+    .footer-widget h4 { color: white; margin-bottom: 1.5rem; font-size: 1.25rem; }
+    .footer-widget ul { list-style: none; padding: 0; }
+    .footer-widget ul li { margin-bottom: 0.5rem; }
+    .footer-widget ul li a { color: var(--gray-400); transition: var(--transition-fast); text-decoration: none; }
+    .footer-widget ul li a:hover { color: var(--primary); padding-left: 0.5rem; }
+    .footer-bottom { margin-top: 3rem; padding: 1.5rem 0; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; }
+
+    /* Floating Buttons */
+    .floating-buttons {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .floating-btn {
+      width: 50px; height: 50px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition-base);
+      box-shadow: var(--shadow-lg);
+      border: none;
+    }
+    .floating-btn:hover { transform: scale(1.1); background: var(--primary-dark); }
+    @media (max-width: 768px) { .floating-btn { width: 40px; height: 40px; } }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: var(--white);
+        padding: 1rem;
+        border-radius: var(--radius-lg);
+        margin-top: 1rem;
+        max-height: 70vh;
+        overflow-y: auto;
+      }
+      body.dark-mode .navbar-collapse { background: var(--gray-100); }
+      .mega-menu { position: absolute !important; left: 1rem !important; right: 1rem !important; width: auto !important; }
+    }
+
+    @media (max-width: 768px) {
+      .page-title { font-size: 2rem; }
+      .top-bar .contact-info span { margin-right: 0.75rem; font-size: 0.7rem; }
+    }
+    @media (max-width: 576px) { .top-bar { display: none; } }
+
+    .bg-light { background-color: var(--light-bg) !important; }
+    .text-success { color: var(--primary) !important; }
+    .btn-success { background: var(--primary); border: none; }
+    .btn-success:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+  </style>
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+  <div><div class="loader-logo"><i class="fas fa-hand-holding-heart"></i></div>
+  <div class="loader-spinner"></div>
+  <div style="color: white;">Loading...</div></div>
+</div>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="contact-info">
+          <span><i class="fas fa-phone-alt"></i> +1 800 555 1234</span>
+          <span><i class="fas fa-envelope"></i> info@hopenexus.org</span>
+          <span class="d-none d-md-inline"><i class="fas fa-clock"></i> Mon-Fri: 9AM-6PM</span>
+        </div>
+      </div>
+      <div class="col-md-6 text-end">
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <i class="fas fa-hand-holding-heart"></i> <span>Hope<span class="text-gradient">Nexus</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown mega-dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">About</a>
+          <div class="dropdown-menu mega-menu">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3 col-6">
+                  <div class="mega-menu-title"><i class="fas fa-info-circle"></i> About Us</div>
+                  <ul><li><a href="our-story.html">Our Story</a></li><li><a href="mission-vision.html">Mission & Vision</a></li><li><a href="core-values.html">Core Values</a></li><li><a href="history.html">History</a></li></ul>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="mega-menu-title"><i class="fas fa-chart-line"></i> Reports</div>
+                  <ul><li><a href="annual-reports.html">Annual Reports</a></li><li><a href="#">Financial Statements</a></li><li><a href="#">Impact Reports</a></li><li><a href="#">Audit Reports</a></li></ul>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="mega-menu-title"><i class="fas fa-users"></i> Leadership</div>
+                  <ul><li><a href="board-of-directors.html">Board of Directors</a></li><li><a href="executive-team.html">Executive Team</a></li><li><a href="#">Global Ambassadors</a></li></ul>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="mega-menu-title"><i class="fas fa-handshake"></i> Partnerships</div>
+                  <ul><li><a href="#">Our Partners</a></li><li><a href="#">Become a Partner</a></li><li><a href="#">Corporate Partnerships</a></li></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">What We Do</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">All Causes</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Education</a></li>
+            <li><a class="dropdown-item" href="#">Healthcare</a></li>
+            <li><a class="dropdown-item" href="#">Women Empowerment</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Get Involved</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#donateModal">Donate</a></li>
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#volunteerModal">Volunteer</a></li>
+            <li><a class="dropdown-item" href="#">Fundraise</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-buttons ms-3 d-flex gap-2">
+        <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#donateModal"><i class="fas fa-heart"></i> Donate</button>
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#volunteerModal"><i class="fas fa-hands-helping"></i> Volunteer</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h1 class="page-title animate__animated animate__fadeInUp">Annual Reports</h1>
+        <p class="animate__animated animate__fadeInUp animate__delay-1s">Committed to transparency, accountability, and impact measurement</p>
+        <div class="page-breadcrumb animate__animated animate__fadeInUp animate__delay-2s">
+          <a href="index.html">Home</a> / <a href="about.html">About</a> / <span>Annual Reports</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Introduction Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-7" data-aos="fade-right">
+        <div class="section-badge"><span>Our Commitment</span></div>
+        <h2 class="section-title">Transparency in Everything We Do</h2>
+        <p class="lead">At HopeNexus Foundation, we believe that transparency builds trust. That's why we publicly share our annual reports, financial statements, and impact assessments.</p>
+        <p>Our reports provide detailed information about our programs, financial performance, governance, and the measurable impact we've achieved. We are proud to be recognized as a top-rated charity for transparency and accountability.</p>
+        <div class="row mt-4 g-3">
+          <div class="col-sm-4">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-file-alt fa-2x text-success me-3"></i>
+              <div><strong>10+ Years</strong><br><small>Of Reports</small></div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-chart-line fa-2x text-success me-3"></i>
+              <div><strong>100%</strong><br><small>Audited</small></div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-star fa-2x text-success me-3"></i>
+              <div><strong>4.9/5</strong><br><small>Charity Rating</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5" data-aos="fade-left">
+        <div class="bg-light p-4 rounded-4 text-center">
+          <i class="fas fa-chart-simple fa-3x text-success mb-3"></i>
+          <h4>Quick Financial Facts</h4>
+          <hr>
+          <div class="row">
+            <div class="col-6">
+              <h3 class="text-success mb-0">89%</h3>
+              <small>Program Spending</small>
+            </div>
+            <div class="col-6">
+              <h3 class="text-success mb-0">11%</h3>
+              <small>Admin & Fundraising</small>
+            </div>
+          </div>
+          <hr>
+          <p class="small text-muted mb-0">Based on 2023 audited financial statements</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Financial Highlights -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-badge mx-auto"><span>Financial Overview</span></div>
+      <h2 class="section-title">2023 Financial Highlights</h2>
+      <p class="section-subtitle">How your donations are making an impact</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="stat-box">
+          <div class="stat-number">$12.5M</div>
+          <div class="stat-label">Total Revenue</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="stat-box">
+          <div class="stat-number">$11.1M</div>
+          <div class="stat-label">Program Expenses</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="stat-box">
+          <div class="stat-number">89%</div>
+          <div class="stat-label">Program Efficiency</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="stat-box">
+          <div class="stat-number">500K+</div>
+          <div class="stat-label">Lives Impacted</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Annual Reports Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-badge mx-auto"><span>Annual Reports</span></div>
+      <h2 class="section-title">Download Our Reports</h2>
+      <p class="section-subtitle">Complete transparency through detailed annual documentation</p>
+    </div>
+    
+    <div class="row g-4">
+      <!-- 2023 Report -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="report-card">
+          <div class="report-icon"><i class="fas fa-file-pdf"></i></div>
+          <div class="report-content">
+            <div class="report-year">Latest Report</div>
+            <h3 class="report-title">Annual Report 2023</h3>
+            <p class="report-description">Comprehensive overview of our programs, financials, and impact achievements in 2023.</p>
+            <div class="report-meta">
+              <span><i class="far fa-calendar-alt"></i> Published: March 2024</span>
+              <span><i class="fas fa-file-pdf"></i> 4.2 MB</span>
+            </div>
+            <button class="btn-download" onclick="downloadReport('Annual Report 2023')"><i class="fas fa-download"></i> Download PDF</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 2022 Report -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="report-card">
+          <div class="report-icon"><i class="fas fa-file-pdf"></i></div>
+          <div class="report-content">
+            <div class="report-year">Archive</div>
+            <h3 class="report-title">Annual Report 2022</h3>
+            <p class="report-description">Year of expansion and innovation. Highlights include new program launches in Asia and Africa.</p>
+            <div class="report-meta">
+              <span><i class="far fa-calendar-alt"></i> Published: March 2023</span>
+              <span><i class="fas fa-file-pdf"></i> 3.8 MB</span>
+            </div>
+            <button class="btn-download" onclick="downloadReport('Annual Report 2022')"><i class="fas fa-download"></i> Download PDF</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 2021 Report -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="report-card">
+          <div class="report-icon"><i class="fas fa-file-pdf"></i></div>
+          <div class="report-content">
+            <div class="report-year">Archive</div>
+            <h3 class="report-title">Annual Report 2021</h3>
+            <p class="report-description">Adapting and thriving through global challenges. Emergency response and program continuity.</p>
+            <div class="report-meta">
+              <span><i class="far fa-calendar-alt"></i> Published: March 2022</span>
+              <span><i class="fas fa-file-pdf"></i> 3.5 MB</span>
+            </div>
+            <button class="btn-download" onclick="downloadReport('Annual Report 2021')"><i class="fas fa-download"></i> Download PDF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Financial Statements Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-badge mx-auto"><span>Financial Documents</span></div>
+      <h2 class="section-title">Audited Financial Statements</h2>
+      <p class="section-subtitle">Independent audits ensuring financial integrity</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="report-card">
+          <div class="report-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+          <div class="report-content">
+            <div class="report-year">Audited</div>
+            <h3 class="report-title">Financial Statements 2023</h3>
+            <p class="report-description">Independent audit report with detailed financial notes and disclosures.</p>
+            <div class="report-meta">
+              <span><i class="fas fa-balance-scale"></i> Audited by Deloitte</span>
+            </div>
+            <button class="btn-download" onclick="downloadReport('Financial Statements 2023')"><i class="fas fa-download"></i> Download PDF</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="report-card">
+          <div class="report-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+          <div class="report-content">
+            <div class="report-year">Audited</div>
+            <h3 class="report-title">Financial Statements 2022</h3>
+            <p class="report-description">Independent audit report with comparative financial analysis.</p>
+            <div class="report-meta">
+              <span><i class="fas fa-balance-scale"></i> Audited by Deloitte</span>
+            </div>
+            <button class="btn-download" onclick="downloadReport('Financial Statements 2022')"><i class="fas fa-download"></i> Download PDF</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="report-card">
+          <div class="report-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+          <div class="report-content">
+            <div class="report-year">Form 990</div>
+            <h3 class="report-title">IRS Form 990 2023</h3>
+            <p class="report-description">Annual tax return filed with the IRS. Full transparency on operations.</p>
+            <div class="report-meta">
+              <span><i class="fas fa-building"></i> Public Document</span>
+            </div>
+            <button class="btn-download" onclick="downloadReport('IRS Form 990 2023')"><i class="fas fa-download"></i> Download PDF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Impact Reports Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-badge mx-auto"><span>Impact Measurement</span></div>
+      <h2 class="section-title">Impact Reports</h2>
+      <p class="section-subtitle">Measuring and sharing the difference we make together</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="report-card">
+          <div class="report-icon"><i class="fas fa-chart-line"></i></div>
+          <div class="report-content">
+            <div class="report-year">2023 Impact</div>
+            <h3 class="report-title">Global Impact Report 2023</h3>
+            <p class="report-description">Comprehensive analysis of our programs' effectiveness, beneficiary outcomes, and long-term impact across all regions.</p>
+            <div class="report-meta">
+              <span><i class="fas fa-users"></i> 500K+ Beneficiaries</span>
+              <span><i class="fas fa-chart-line"></i> 35 Countries</span>
+            </div>
+            <button class="btn-download" onclick="downloadReport('Global Impact Report 2023')"><i class="fas fa-download"></i> Download PDF</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="report-card">
+          <div class="report-icon"><i class="fas fa-tree"></i></div>
+          <div class="report-content">
+            <div class="report-year">Special Report</div>
+            <h3 class="report-title">Environmental Impact Report</h3>
+            <p class="report-description">Measuring our tree planting initiatives, carbon reduction, and sustainable development programs.</p>
+            <div class="report-meta">
+              <span><i class="fas fa-tree"></i> 1M+ Trees Planted</span>
+              <span><i class="fas fa-globe"></i> 15 Countries</span>
+            </div>
+            <button class="btn-download" onclick="downloadReport('Environmental Impact Report')"><i class="fas fa-download"></i> Download PDF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications & Accreditations -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-badge mx-auto"><span>Trust & Credibility</span></div>
+      <h2 class="section-title">Certifications & Accreditations</h2>
+      <p class="section-subtitle">Recognized for excellence and transparency</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="0">
+        <div class="badge-card">
+          <i class="fas fa-star fa-3x text-warning"></i>
+          <h5 class="mt-2">Charity Navigator</h5>
+          <p class="small text-muted">4.9/5 Stars<br>Top Rated</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="100">
+        <div class="badge-card">
+          <i class="fas fa-award fa-3x text-success"></i>
+          <h5 class="mt-2">GuideStar Gold</h5>
+          <p class="small text-muted">Platinum Transparency<br>2023, 2024</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="200">
+        <div class="badge-card">
+          <i class="fas fa-check-circle fa-3x text-info"></i>
+          <h5 class="mt-2">BBB Wise Giving</h5>
+          <p class="small text-muted">Accredited Charity<br>Since 2015</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="300">
+        <div class="badge-card">
+          <i class="fas fa-globe fa-3x text-primary"></i>
+          <h5 class="mt-2">UN ECOSOC Status</h5>
+          <p class="small text-muted">Special Consultative<br>Since 2018</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Funding Sources Chart -->
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="section-badge"><span>Where Funds Come From</span></div>
+        <h2 class="section-title">Funding Sources</h2>
+        <p class="lead">Diverse funding ensures program stability and independence.</p>
+        <div class="mt-4">
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span>Individual Donations</span>
+              <span class="text-success">65%</span>
+            </div>
+            <div class="progress"><div class="progress-bar bg-success" style="width: 65%"></div></div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span>Corporate Partnerships</span>
+              <span class="text-success">18%</span>
+            </div>
+            <div class="progress"><div class="progress-bar bg-success" style="width: 18%"></div></div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span>Grants</span>
+              <span class="text-success">12%</span>
+            </div>
+            <div class="progress"><div class="progress-bar bg-success" style="width: 12%"></div></div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span>Other Income</span>
+              <span class="text-success">5%</span>
+            </div>
+            <div class="progress"><div class="progress-bar bg-success" style="width: 5%"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="section-badge"><span>Where Funds Go</span></div>
+        <h2 class="section-title">Expense Allocation</h2>
+        <p class="lead">Maximizing impact through responsible spending.</p>
+        <div class="mt-4">
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span>Program Services</span>
+              <span class="text-success">89%</span>
+            </div>
+            <div class="progress"><div class="progress-bar bg-primary" style="width: 89%"></div></div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span>Fundraising</span>
+              <span class="text-success">7%</span>
+            </div>
+            <div class="progress"><div class="progress-bar bg-primary" style="width: 7%"></div></div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span>Administration</span>
+              <span class="text-success">4%</span>
+            </div>
+            <div class="progress"><div class="progress-bar bg-primary" style="width: 4%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter Signup -->
+<section class="py-5" style="background: linear-gradient(135deg, var(--primary-dark), var(--primary));">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-lg-8 mx-auto text-white">
+        <i class="fas fa-envelope-open-text fa-3x mb-3"></i>
+        <h2 class="display-5 fw-bold mb-4">Stay Updated</h2>
+        <p class="lead mb-4">Subscribe to receive our latest annual reports and impact updates directly in your inbox.</p>
+        <div class="d-flex justify-content-center">
+          <div class="input-group" style="max-width: 500px;">
+            <input type="email" class="form-control form-control-lg" placeholder="Your email address">
+            <button class="btn btn-light btn-lg">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="footer-widget">
+          <h3 class="footer-logo"><i class="fas fa-hand-holding-heart text-success"></i> Hope<span class="text-success">Nexus</span></h3>
+          <p>Building a better tomorrow through compassion, action, and sustainable development.</p>
+          <div class="footer-social mt-3">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <div class="footer-widget">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="annual-reports.html">Annual Reports</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-6">
+        <div class="footer-widget">
+          <h4>Get Involved</h4>
+          <ul>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#donateModal">Donate</a></li>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#volunteerModal">Volunteer</a></li>
+            <li><a href="#">Fundraise</a></li>
+            <li><a href="#">Partnership</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="footer-widget">
+          <h4>Contact Info</h4>
+          <ul class="contact-info">
+            <li><i class="fas fa-map-marker-alt text-success me-2"></i> 123 Hope Street, NY 10001</li>
+            <li><i class="fas fa-phone text-success me-2"></i> +1 800 555 1234</li>
+            <li><i class="fas fa-envelope text-success me-2"></i> info@hopenexus.org</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 HopeNexus Foundation. All rights reserved. | EIN: 88-1234567</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Modals -->
+<div class="modal fade" id="donateModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title"><i class="fas fa-heart"></i> Make a Donation</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <form id="donationForm">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label fw-bold">Select Amount</label>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <button type="button" class="amount-btn btn btn-outline-success" data-amount="10">$10</button>
+                <button type="button" class="amount-btn btn btn-outline-success" data-amount="25">$25</button>
+                <button type="button" class="amount-btn btn btn-outline-success" data-amount="50">$50</button>
+                <button type="button" class="amount-btn btn btn-outline-success" data-amount="100">$100</button>
+              </div>
+              <input type="number" class="form-control" id="customAmount" placeholder="Custom Amount">
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="checkbox" id="monthly">
+                <label class="form-check-label">Make this monthly</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3"><input type="text" class="form-control" placeholder="Full Name" required></div>
+              <div class="mb-3"><input type="email" class="form-control" placeholder="Email Address" required></div>
+              <div class="mb-3"><input type="tel" class="form-control" placeholder="Phone Number"></div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success w-100 mt-3">Donate Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="volunteerModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title"><i class="fas fa-hands-helping"></i> Volunteer With Us</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <form id="volunteerForm">
+          <div class="mb-3"><input type="text" class="form-control" placeholder="Full Name" required></div>
+          <div class="mb-3"><input type="email" class="form-control" placeholder="Email Address" required></div>
+          <div class="mb-3">
+            <select class="form-select">
+              <option>Select your interest area</option>
+              <option>Education & Teaching</option>
+              <option>Healthcare & Medical</option>
+              <option>Fundraising</option>
+              <option>Event Management</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Submit Application</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Floating Buttons -->
+<div class="floating-buttons">
+  <div class="floating-btn" id="darkModeToggle"><i class="fas fa-moon"></i></div>
+  <div class="floating-btn" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+  <div class="floating-btn" id="whatsappBtn"><i class="fab fa-whatsapp"></i></div>
+  <div class="floating-btn" id="shareBtn"><i class="fas fa-share-alt"></i></div>
+</div>
+
+<!-- Toast Container -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  // Initialize AOS
+  AOS.init({ duration: 1000, once: true, offset: 100 });
+  
+  // Preloader
+  $(window).on('load', function() { $('#preloader').fadeOut('slow'); });
+  
+  // Sticky Navbar
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) $('#mainNav').addClass('scrolled');
+    else $('#mainNav').removeClass('scrolled');
+  });
+  
+  // Back to Top
+  $('#backToTop').click(function() { $('html, body').animate({ scrollTop: 0 }, 500); });
+  $(window).scroll(function() { if ($(this).scrollTop() > 300) $('#backToTop').fadeIn(); else $('#backToTop').fadeOut(); });
+  
+  // Dark Mode
+  $('#darkModeToggle').click(function() {
+    $('body').toggleClass('dark-mode');
+    if ($('body').hasClass('dark-mode')) $(this).html('<i class="fas fa-sun"></i>');
+    else $(this).html('<i class="fas fa-moon"></i>');
+    localStorage.setItem('darkMode', $('body').hasClass('dark-mode'));
+  });
+  if (localStorage.getItem('darkMode') === 'true') { $('body').addClass('dark-mode'); $('#darkModeToggle').html('<i class="fas fa-sun"></i>'); }
+  
+  // WhatsApp
+  $('#whatsappBtn').click(function() { window.open('https://wa.me/18005551234?text=Hello%20HopeNexus', '_blank'); });
+  
+  // Share
+  $('#shareBtn').click(function() {
+    if (navigator.share) navigator.share({ title: 'HopeNexus Annual Reports', text: 'View HopeNexus Foundation transparency reports!', url: window.location.href });
+    else alert('Share this page: ' + window.location.href);
+  });
+  
+  // Download Report Function
+  function downloadReport(reportName) {
+    showToast(`Downloading ${reportName}...`, 'success');
+    // In production, this would trigger an actual file download
+  }
+  
+  // Donation Amount Buttons
+  $('.amount-btn').click(function() {
+    $('.amount-btn').removeClass('active');
+    $(this).addClass('active');
+    $('#customAmount').val($(this).data('amount'));
+  });
+  
+  // Toast Function
+  function showToast(message, type = 'success') {
+    var toast = $('<div class="toast align-items-center text-white bg-' + type + ' border-0" role="alert"><div class="d-flex"><div class="toast-body">' + message + '</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button></div></div>');
+    $('.toast-container').append(toast);
+    new bootstrap.Toast(toast[0], { delay: 3000 }).show();
+    setTimeout(function() { toast.remove(); }, 3500);
+  }
+  
+  // Form Submissions
+  $('#donationForm').submit(function(e) { e.preventDefault(); showToast('Thank you for your generous donation!'); $('#donateModal').modal('hide'); this.reset(); });
+  $('#volunteerForm').submit(function(e) { e.preventDefault(); showToast('Application submitted! We\'ll contact you soon.'); $('#volunteerModal').modal('hide'); this.reset(); });
+  
+  // Newsletter Subscribe
+  $('.newsletter-section .btn-light').click(function() {
+    var email = $(this).siblings('input').val();
+    if (email && email.includes('@')) {
+      showToast('Subscribed successfully! Check your inbox.', 'success');
+      $(this).siblings('input').val('');
+    } else {
+      showToast('Please enter a valid email address.', 'danger');
+    }
+  });
+</script>
+</body>
+</html>
