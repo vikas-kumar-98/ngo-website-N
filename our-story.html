@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="description" content="Discover the inspiring journey of HopeNexus Foundation - from a small group of passionate individuals to a global humanitarian organization transforming millions of lives worldwide.">
+  <meta name="keywords" content="HopeNexus story, NGO history, humanitarian journey, foundation story, charity history">
+  <meta name="author" content="HopeNexus Foundation">
+  <meta name="theme-color" content="#2e7d32">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Our Story | HopeNexus Foundation - A Journey of Hope">
+  <meta property="og:site_name" content="HopeNexus Foundation">
+  <meta property="og:description" content="From humble beginnings to global impact - read the inspiring story of how HopeNexus Foundation transformed from a small initiative into a worldwide movement.">
+  <meta property="og:image" content="https://picsum.photos/id/101/1200/630">
+  <meta property="og:url" content="https://www.hopenexus.org/our-story.html">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Story | HopeNexus Foundation">
+  <meta name="twitter:description" content="The inspiring journey of HopeNexus Foundation - from a small dream to global impact.">
+  
+  <title>Our Story | The Journey of HopeNexus Foundation | From Humble Beginnings to Global Impact</title>
+  
+  <!-- CSS Dependencies -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  
+  <style>
+    /* ============================================
+       CSS VARIABLES & RESET
+    ============================================ */
+    :root {
+      --primary: #2e7d32;
+      --primary-dark: #1b5e20;
+      --primary-light: #4caf50;
+      --primary-ultra-light: #e8f5e9;
+      --secondary: #1976d2;
+      --accent: #f57c00;
+      --danger: #f44336;
+      --warning: #ffc107;
+      --white: #ffffff;
+      --light-bg: #f8f9fa;
+      --gray-100: #f5f5f5;
+      --gray-200: #eeeeee;
+      --gray-300: #e0e0e0;
+      --gray-400: #bdbdbd;
+      --gray-500: #9e9e9e;
+      --gray-600: #757575;
+      --gray-700: #616161;
+      --gray-800: #424242;
+      --gray-900: #212121;
+      --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+      --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+      --shadow-xl: 0 20px 25px rgba(0,0,0,0.15);
+      --radius-sm: 0.375rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 0.75rem;
+      --radius-xl: 1rem;
+      --radius-2xl: 1.5rem;
+      --radius-full: 9999px;
+      --transition-fast: 0.2s ease;
+      --transition-base: 0.3s ease;
+      --transition-slow: 0.5s ease;
+    }
+
+    body.dark-mode {
+      --white: #1a1a2e;
+      --light-bg: #16213e;
+      --gray-100: #1e293b;
+      --gray-200: #334155;
+      --gray-300: #475569;
+      --gray-600: #cbd5e1;
+      --gray-700: #e2e8f0;
+      --gray-800: #f1f5f9;
+      --gray-900: #f8fafc;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      overflow-x: hidden;
+      background-color: var(--white);
+      color: var(--gray-800);
+      transition: background-color var(--transition-base), color var(--transition-base);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: var(--gray-200); }
+    ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: var(--radius-full); }
+    ::-webkit-scrollbar-thumb:hover { background: var(--primary-dark); }
+
+    /* Preloader */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--primary);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.5s;
+    }
+    .loader-logo { font-size: 4rem; color: white; margin-bottom: 1rem; animation: pulse 1.5s infinite; }
+    @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.8; } }
+    .loader-spinner {
+      width: 50px; height: 50px; border: 3px solid rgba(255,255,255,0.3);
+      border-top-color: white; border-radius: 50%; margin: 1rem auto;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Top Bar */
+    .top-bar {
+      background: var(--gray-900);
+      color: var(--white);
+      padding: 0.5rem 0;
+      font-size: 0.875rem;
+    }
+    .top-bar .contact-info span { margin-right: 1.5rem; }
+    .top-bar .contact-info i { margin-right: 0.25rem; color: var(--primary-light); }
+    .social-icons a { color: var(--white); margin-left: 1rem; transition: var(--transition-fast); display: inline-block; }
+    .social-icons a:hover { color: var(--primary-light); transform: translateY(-2px); }
+
+    /* Navigation */
+    .navbar {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-base);
+      padding: 1rem 0;
+    }
+    .navbar.scrolled { padding: 0.5rem 0; box-shadow: var(--shadow-lg); }
+    body.dark-mode .navbar { background: rgba(26,26,46,0.95); }
+    .navbar-brand { font-size: 1.75rem; font-weight: 800; }
+    .navbar-brand i { color: var(--primary); }
+    .navbar-brand span { background: linear-gradient(135deg, var(--gray-900), var(--primary)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-link { font-weight: 600; margin: 0 0.5rem; position: relative; }
+    .nav-link::before {
+      content: ''; position: absolute; bottom: -5px; left: 50%; transform: translateX(-50%);
+      width: 0; height: 2px; background: var(--primary); transition: width var(--transition-base);
+    }
+    .nav-link:hover::before, .nav-link.active::before { width: 80%; }
+
+    /* Mega Dropdown */
+    .mega-dropdown { position: static; }
+    @media (min-width: 992px) {
+      .mega-menu {
+        width: 100%; left: 0; right: 0; padding: 2rem;
+        border: none; border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+        box-shadow: var(--shadow-xl);
+      }
+    }
+    .mega-menu-title { font-weight: 700; margin-bottom: 1rem; color: var(--primary); }
+    .mega-menu ul { list-style: none; padding: 0; }
+    .mega-menu ul li { margin-bottom: 0.5rem; }
+    .mega-menu ul li a { color: var(--gray-700); transition: var(--transition-fast); text-decoration: none; }
+    .mega-menu ul li a:hover { color: var(--primary); padding-left: 0.5rem; }
+
+    /* Page Header */
+    .page-header {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      padding: 120px 0 60px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 1%, transparent 1%);
+      background-size: 50px 50px;
+      animation: moveBackground 20s linear infinite;
+    }
+    @keyframes moveBackground {
+      from { transform: translate(0, 0); }
+      to { transform: translate(50px, 50px); }
+    }
+    .page-title { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; position: relative; z-index: 1; }
+    .page-breadcrumb { position: relative; z-index: 1; }
+    .page-breadcrumb a { color: white; text-decoration: none; opacity: 0.8; }
+    .page-breadcrumb a:hover { opacity: 1; }
+
+    /* Section Styles */
+    .section-badge { display: inline-block; margin-bottom: 1rem; }
+    .section-badge span {
+      background: var(--primary-ultra-light);
+      color: var(--primary);
+      padding: 0.25rem 1.5rem;
+      border-radius: var(--radius-full);
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+    .section-title { font-size: 2.5rem; margin-bottom: 1rem; }
+    .section-subtitle { font-size: 1.125rem; color: var(--gray-600); margin-bottom: 2rem; }
+    @media (max-width: 768px) { .section-title { font-size: 1.75rem; } }
+
+    /* Story Cards */
+    .story-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition-base);
+      height: 100%;
+      text-align: center;
+    }
+    .story-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-xl); }
+    .story-icon { font-size: 3rem; color: var(--primary); margin-bottom: 1rem; }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding: 20px 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--primary), var(--primary-light));
+      border-radius: var(--radius-full);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 60px;
+    }
+    .timeline-year {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: white;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.25rem;
+      z-index: 2;
+      box-shadow: var(--shadow-lg);
+    }
+    .timeline-content {
+      width: 45%;
+      padding: 25px;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      position: relative;
+      transition: var(--transition-base);
+    }
+    .timeline-content:hover { transform: scale(1.02); box-shadow: var(--shadow-xl); }
+    .timeline-item:nth-child(odd) .timeline-content { margin-left: auto; }
+    .timeline-content h4 { color: var(--primary); margin-bottom: 10px; }
+    .timeline-content i { color: var(--primary-light); margin-right: 8px; }
+    @media (max-width: 768px) {
+      .timeline::before { left: 30px; }
+      .timeline-year { left: 30px; transform: translateX(0); width: 60px; height: 60px; font-size: 1rem; }
+      .timeline-content { width: calc(100% - 100px); margin-left: 100px !important; }
+    }
+
+    /* Quote Section */
+    .quote-section {
+      background: linear-gradient(135deg, var(--primary-ultra-light), var(--white));
+      padding: 4rem 0;
+    }
+    .quote-card {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .quote-icon { font-size: 4rem; color: var(--primary); opacity: 0.5; margin-bottom: 1rem; }
+    .quote-text { font-size: 1.5rem; font-style: italic; margin-bottom: 1rem; }
+    .quote-author { font-weight: 600; color: var(--primary); }
+
+    /* Milestone Cards */
+    .milestone-card {
+      text-align: center;
+      padding: 2rem;
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      transition: var(--transition-base);
+      height: 100%;
+    }
+    .milestone-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    .milestone-number { font-size: 3rem; font-weight: 800; color: var(--primary); }
+    .milestone-label { font-weight: 600; margin-top: 0.5rem; }
+
+    /* Footer */
+    .footer {
+      background: var(--gray-900);
+      color: var(--gray-400);
+      padding-top: 4rem;
+    }
+    .footer-logo { font-size: 1.75rem; font-weight: 800; margin-bottom: 1.5rem; }
+    .footer-widget h4 { color: white; margin-bottom: 1.5rem; font-size: 1.25rem; }
+    .footer-widget ul { list-style: none; padding: 0; }
+    .footer-widget ul li { margin-bottom: 0.5rem; }
+    .footer-widget ul li a { color: var(--gray-400); transition: var(--transition-fast); text-decoration: none; }
+    .footer-widget ul li a:hover { color: var(--primary); padding-left: 0.5rem; }
+    .footer-bottom { margin-top: 3rem; padding: 1.5rem 0; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; }
+
+    /* Floating Buttons */
+    .floating-buttons {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .floating-btn {
+      width: 50px; height: 50px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition-base);
+      box-shadow: var(--shadow-lg);
+      border: none;
+    }
+    .floating-btn:hover { transform: scale(1.1); background: var(--primary-dark); }
+    @media (max-width: 768px) { .floating-btn { width: 40px; height: 40px; font-size: 1rem; } }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: var(--white);
+        padding: 1rem;
+        border-radius: var(--radius-lg);
+        margin-top: 1rem;
+        max-height: 70vh;
+        overflow-y: auto;
+      }
+      body.dark-mode .navbar-collapse { background: var(--gray-100); }
+      .mega-menu { position: absolute !important; left: 1rem !important; right: 1rem !important; width: auto !important; }
+    }
+
+    @media (max-width: 768px) {
+      .page-title { font-size: 2rem; }
+      .top-bar .contact-info span { margin-right: 0.75rem; font-size: 0.7rem; }
+      .quote-text { font-size: 1.2rem; }
+    }
+
+    @media (max-width: 576px) {
+      .top-bar { display: none; }
+    }
+
+    .bg-light { background-color: var(--light-bg) !important; }
+    .text-success { color: var(--primary) !important; }
+    .btn-success { background: var(--primary); border: none; }
+    .btn-success:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+  </style>
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+  <div><div class="loader-logo"><i class="fas fa-hand-holding-heart"></i></div>
+  <div class="loader-spinner"></div>
+  <div style="color: white;">Loading...</div></div>
+</div>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="contact-info">
+          <span><i class="fas fa-phone-alt"></i> +1 800 555 1234</span>
+          <span><i class="fas fa-envelope"></i> info@hopenexus.org</span>
+          <span class="d-none d-md-inline"><i class="fas fa-clock"></i> Mon-Fri: 9AM-6PM</span>
+        </div>
+      </div>
+      <div class="col-md-6 text-end">
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <i class="fas fa-hand-holding-heart"></i> <span>Hope<span class="text-gradient">Nexus</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown mega-dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">About</a>
+          <div class="dropdown-menu mega-menu">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3 col-6">
+                  <div class="mega-menu-title"><i class="fas fa-info-circle"></i> About Us</div>
+                  <ul><li><a href="our-story.html">Our Story</a></li><li><a href="mission-vision.html">Mission & Vision</a></li><li><a href="core-values.html">Core Values</a></li><li><a href="about.html">History</a></li></ul>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="mega-menu-title"><i class="fas fa-users"></i> Leadership</div>
+                  <ul><li><a href="#">Board of Directors</a></li><li><a href="#">Executive Team</a></li><li><a href="#">Global Ambassadors</a></li></ul>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="mega-menu-title"><i class="fas fa-chart-line"></i> Reports</div>
+                  <ul><li><a href="#">Annual Reports</a></li><li><a href="#">Financial Statements</a></li><li><a href="#">Impact Reports</a></li></ul>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="mega-menu-title"><i class="fas fa-handshake"></i> Partnerships</div>
+                  <ul><li><a href="#">Our Partners</a></li><li><a href="#">Become a Partner</a></li><li><a href="#">Corporate Partnerships</a></li></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">What We Do</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">All Causes</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Education</a></li>
+            <li><a class="dropdown-item" href="#">Healthcare</a></li>
+            <li><a class="dropdown-item" href="#">Women Empowerment</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Get Involved</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#donateModal">Donate</a></li>
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#volunteerModal">Volunteer</a></li>
+            <li><a class="dropdown-item" href="#">Fundraise</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-buttons ms-3 d-flex gap-2">
+        <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#donateModal"><i class="fas fa-heart"></i> Donate</button>
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#volunteerModal"><i class="fas fa-hands-helping"></i> Volunteer</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h1 class="page-title animate__animated animate__fadeInUp">Our Story</h1>
+        <p class="animate__animated animate__fadeInUp animate__delay-1s">A journey of hope, compassion, and transformative impact spanning over a decade</p>
+        <div class="page-breadcrumb animate__animated animate__fadeInUp animate__delay-2s">
+          <a href="index.html">Home</a> / <a href="about.html">About</a> / <span>Our Story</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Introduction Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6" data-aos="fade-right">
+        <img src="https://picsum.photos/id/101/600/500" alt="HopeNexus Journey" class="img-fluid rounded-4 shadow-lg w-100">
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="section-badge"><span>The Beginning</span></div>
+        <h2 class="section-title">A Dream That Became a Movement</h2>
+        <p class="lead">In 2010, Dr. Sarah Chen had a simple yet powerful vision: to ensure every child has access to quality education.</p>
+        <p>What started as a small tutoring program in a single classroom has blossomed into a global humanitarian organization reaching millions across 35+ countries. Our journey began with just 5 volunteers and $500 in donations. Today, we're proud to have over 25,000 dedicated volunteers and have impacted over 500,000 lives.</p>
+        <p>The name "HopeNexus" reflects our belief that hope connects us all. We are the nexus where compassion meets action, where dreams become reality, and where every individual has the power to create change.</p>
+        <div class="row mt-4">
+          <div class="col-4 text-center">
+            <div class="bg-success text-white rounded-3 p-3">
+              <h3 class="mb-0">2010</h3>
+              <small>Year Founded</small>
+            </div>
+          </div>
+          <div class="col-4 text-center">
+            <div class="bg-success text-white rounded-3 p-3">
+              <h3 class="mb-0">$500</h3>
+              <small>Initial Funds</small>
+            </div>
+          </div>
+          <div class="col-4 text-center">
+            <div class="bg-success text-white rounded-3 p-3">
+              <h3 class="mb-0">5</h3>
+              <small>First Volunteers</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Timeline Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-badge mx-auto"><span>Our Journey</span></div>
+      <h2 class="section-title">Milestones That Shaped Us</h2>
+      <p class="section-subtitle">Every step of our journey has been guided by hope and driven by action</p>
+    </div>
+    <div class="timeline" data-aos="fade-up">
+      <div class="timeline-item">
+        <div class="timeline-year">2010</div>
+        <div class="timeline-content">
+          <h4><i class="fas fa-seedling"></i> The Humble Beginning</h4>
+          <p>Dr. Sarah Chen starts HopeNexus in a small community center with 5 volunteers, providing after-school tutoring to 20 underprivileged children in New York City.</p>
+          <small class="text-muted">Initial impact: 20 students reached</small>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2012</div>
+        <div class="timeline-content">
+          <h4><i class="fas fa-school"></i> First School Partnership</h4>
+          <p>Established partnership with 10 local schools, expanding educational programs to reach 500 students. Introduced scholarship program for high-achieving students.</p>
+          <small class="text-muted">500+ students enrolled</small>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2014</div>
+        <div class="timeline-content">
+          <h4><i class="fas fa-globe-americas"></i> International Expansion</h4>
+          <p>Launched first international programs in Kenya and India, bringing education and healthcare to rural communities. Opened regional offices in Nairobi and Mumbai.</p>
+          <small class="text-muted">First international impact</small>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2016</div>
+        <div class="timeline-content">
+          <h4><i class="fas fa-female"></i> Women's Empowerment Launch</h4>
+          <p>Initiated comprehensive women's empowerment programs including vocational training, microfinance, and leadership development across 5 countries.</p>
+          <small class="text-muted">1,000+ women empowered</small>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2018</div>
+        <div class="timeline-content">
+          <h4><i class="fas fa-heartbeat"></i> Healthcare Initiative</h4>
+          <p>Launched mobile health clinics providing free medical care, vaccinations, and health education to 50+ remote villages across Africa and Asia.</p>
+          <small class="text-muted">100,000+ patients treated</small>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2020</div>
+        <div class="timeline-content">
+          <h4><i class="fas fa-hand-holding-heart"></i> COVID-19 Response</h4>
+          <p>Mobilized emergency response teams, providing food, medical supplies, and financial assistance to over 50,000 families affected by the pandemic.</p>
+          <small class="text-muted">Emergency relief delivered</small>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2022</div>
+        <div class="timeline-content">
+          <h4><i class="fas fa-tree"></i> Climate Action Program</h4>
+          <p>Launched global environmental initiative, planting over 1 million trees and implementing sustainable farming practices in 15 countries.</p>
+          <small class="text-muted">1M+ trees planted</small>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2024</div>
+        <div class="timeline-content">
+          <h4><i class="fas fa-star"></i> 500,000 Lives Milestone</h4>
+          <p>Celebrated impacting over 500,000 lives across 35+ countries with 150+ active projects and 25,000+ dedicated volunteers worldwide.</p>
+          <small class="text-muted">1M lives goal by 2025</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Milestone Stats -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-3 col-6" data-aos="fade-up">
+        <div class="milestone-card">
+          <div class="milestone-number">15+</div>
+          <div class="milestone-label">Years of Service</div>
+          <small class="text-muted">Since 2010</small>
+        </div>
+      </div>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="milestone-card">
+          <div class="milestone-number">35+</div>
+          <div class="milestone-label">Countries</div>
+          <small class="text-muted">Global Presence</small>
+        </div>
+      </div>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="milestone-card">
+          <div class="milestone-number">500K+</div>
+          <div class="milestone-label">Lives Impacted</div>
+          <small class="text-muted">And growing</small>
+        </div>
+      </div>
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="milestone-card">
+          <div class="milestone-number">25K+</div>
+          <div class="milestone-label">Volunteers</div>
+          <small class="text-muted">Worldwide</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Inspirational Quote -->
+<section class="quote-section">
+  <div class="container">
+    <div class="quote-card" data-aos="zoom-in">
+      <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+      <p class="quote-text">"Hope is not just a feeling. It's a choice. Every day, we choose to believe that change is possible, and we act on that belief. That's the HopeNexus way."</p>
+      <p class="quote-author">— Dr. Sarah Chen, Founder & CEO</p>
+    </div>
+  </div>
+</section>
+
+<!-- Growth Story Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+        <img src="https://picsum.photos/id/42/600/500" alt="Growth Story" class="img-fluid rounded-4 shadow-lg w-100">
+      </div>
+      <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+        <div class="section-badge"><span>Our Growth</span></div>
+        <h2 class="section-title">From Local to Global: A Story of Exponential Growth</h2>
+        <p>What started as a single classroom program has evolved into a worldwide movement. Our growth hasn't just been about numbers—it's been about deepening our impact and expanding our reach to those who need us most.</p>
+        <div class="mt-4">
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <span>Program Expansion</span>
+              <span class="text-success">1 → 150+ projects</span>
+            </div>
+            <div class="progress"><div class="progress-bar bg-success" style="width: 100%"></div></div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <span>Geographic Reach</span>
+              <span class="text-success">1 → 35+ countries</span>
+            </div>
+            <div class="progress"><div class="progress-bar bg-success" style="width: 100%"></div></div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <span>Team Size</span>
+              <span class="text-success">5 → 25,000+ volunteers</span>
+            </div>
+            <div class="progress"><div class="progress-bar bg-success" style="width: 100%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5" style="background: linear-gradient(135deg, var(--primary-dark), var(--primary));">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-lg-8 mx-auto text-white">
+        <h2 class="display-5 fw-bold mb-4">Be Part of Our Continuing Story</h2>
+        <p class="lead mb-4">Every great story is written by many hands. Join us in writing the next chapter of hope and transformation.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <button class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#donateModal">Donate Now</button>
+          <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#volunteerModal">Join Our Journey</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="footer-widget">
+          <h3 class="footer-logo"><i class="fas fa-hand-holding-heart text-success"></i> Hope<span class="text-success">Nexus</span></h3>
+          <p>Building a better tomorrow through compassion, action, and sustainable development.</p>
+          <div class="footer-social mt-3">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <div class="footer-widget">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="mission-vision.html">Mission & Vision</a></li>
+            <li><a href="core-values.html">Core Values</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-6">
+        <div class="footer-widget">
+          <h4>Get Involved</h4>
+          <ul>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#donateModal">Donate</a></li>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#volunteerModal">Volunteer</a></li>
+            <li><a href="#">Fundraise</a></li>
+            <li><a href="#">Partnership</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="footer-widget">
+          <h4>Contact Info</h4>
+          <ul class="contact-info">
+            <li><i class="fas fa-map-marker-alt text-success me-2"></i> 123 Hope Street, NY 10001</li>
+            <li><i class="fas fa-phone text-success me-2"></i> +1 800 555 1234</li>
+            <li><i class="fas fa-envelope text-success me-2"></i> info@hopenexus.org</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 HopeNexus Foundation. All rights reserved. | EIN: 88-1234567</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Modals -->
+<div class="modal fade" id="donateModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title"><i class="fas fa-heart"></i> Make a Donation</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <form id="donationForm">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label fw-bold">Select Amount</label>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <button type="button" class="amount-btn btn btn-outline-success" data-amount="10">$10</button>
+                <button type="button" class="amount-btn btn btn-outline-success" data-amount="25">$25</button>
+                <button type="button" class="amount-btn btn btn-outline-success" data-amount="50">$50</button>
+                <button type="button" class="amount-btn btn btn-outline-success" data-amount="100">$100</button>
+              </div>
+              <input type="number" class="form-control" id="customAmount" placeholder="Custom Amount">
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="checkbox" id="monthly">
+                <label class="form-check-label">Make this monthly</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3"><input type="text" class="form-control" placeholder="Full Name" required></div>
+              <div class="mb-3"><input type="email" class="form-control" placeholder="Email Address" required></div>
+              <div class="mb-3"><input type="tel" class="form-control" placeholder="Phone Number"></div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success w-100 mt-3">Donate Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="volunteerModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title"><i class="fas fa-hands-helping"></i> Volunteer With Us</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <form id="volunteerForm">
+          <div class="mb-3"><input type="text" class="form-control" placeholder="Full Name" required></div>
+          <div class="mb-3"><input type="email" class="form-control" placeholder="Email Address" required></div>
+          <div class="mb-3">
+            <select class="form-select">
+              <option>Select your interest area</option>
+              <option>Education & Teaching</option>
+              <option>Healthcare & Medical</option>
+              <option>Fundraising</option>
+              <option>Event Management</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Submit Application</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Floating Buttons -->
+<div class="floating-buttons">
+  <div class="floating-btn" id="darkModeToggle"><i class="fas fa-moon"></i></div>
+  <div class="floating-btn" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+  <div class="floating-btn" id="whatsappBtn"><i class="fab fa-whatsapp"></i></div>
+</div>
+
+<!-- Toast Container -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  // Initialize AOS
+  AOS.init({ duration: 1000, once: true, offset: 100 });
+  
+  // Preloader
+  $(window).on('load', function() { $('#preloader').fadeOut('slow'); });
+  
+  // Sticky Navbar
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) $('#mainNav').addClass('scrolled');
+    else $('#mainNav').removeClass('scrolled');
+  });
+  
+  // Back to Top
+  $('#backToTop').click(function() { $('html, body').animate({ scrollTop: 0 }, 500); });
+  $(window).scroll(function() { if ($(this).scrollTop() > 300) $('#backToTop').fadeIn(); else $('#backToTop').fadeOut(); });
+  
+  // Dark Mode
+  $('#darkModeToggle').click(function() {
+    $('body').toggleClass('dark-mode');
+    if ($('body').hasClass('dark-mode')) $(this).html('<i class="fas fa-sun"></i>');
+    else $(this).html('<i class="fas fa-moon"></i>');
+    localStorage.setItem('darkMode', $('body').hasClass('dark-mode'));
+  });
+  if (localStorage.getItem('darkMode') === 'true') { $('body').addClass('dark-mode'); $('#darkModeToggle').html('<i class="fas fa-sun"></i>'); }
+  
+  // WhatsApp
+  $('#whatsappBtn').click(function() { window.open('https://wa.me/18005551234?text=Hello%20HopeNexus', '_blank'); });
+  
+  // Donation Amount Buttons
+  $('.amount-btn').click(function() {
+    $('.amount-btn').removeClass('active');
+    $(this).addClass('active');
+    $('#customAmount').val($(this).data('amount'));
+  });
+  
+  // Toast Function
+  function showToast(message) {
+    var toast = $('<div class="toast align-items-center text-white bg-success border-0" role="alert"><div class="d-flex"><div class="toast-body">' + message + '</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button></div></div>');
+    $('.toast-container').append(toast);
+    new bootstrap.Toast(toast[0], { delay: 3000 }).show();
+    setTimeout(function() { toast.remove(); }, 3500);
+  }
+  
+  // Form Submissions
+  $('#donationForm').submit(function(e) { e.preventDefault(); showToast('Thank you for your generous donation!'); $('#donateModal').modal('hide'); this.reset(); });
+  $('#volunteerForm').submit(function(e) { e.preventDefault(); showToast('Application submitted! We\'ll contact you soon.'); $('#volunteerModal').modal('hide'); this.reset(); });
+</script>
+</body>
+</html>
